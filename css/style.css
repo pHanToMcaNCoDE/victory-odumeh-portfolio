@@ -59,7 +59,7 @@ nav .max-width{
 }
 nav .max-width .logo a{
     text-decoration: none;
-    color: var(--purple);
+    color: var(--lpurple);
     font-family: var(--sc), sans-serif;
 }
 nav .max-width .links{
@@ -221,7 +221,7 @@ aside .max-width li a:hover{
 }
 .hero .max-width h2{
     margin-left: 40px;
-    color: var(--purple);
+    color: var(--lpurple);
     font-size: 48px;
     font-family: var(--sc), sans-serif;
     font-weight: 400;
@@ -230,7 +230,7 @@ aside .max-width li a:hover{
 }
 .hero .max-width .line{
     content: '';
-    background-color: var(--lpurple);
+    background-color: var(--purple);
     height: 1px;
     width: 200px;
     margin-top: 2%;
