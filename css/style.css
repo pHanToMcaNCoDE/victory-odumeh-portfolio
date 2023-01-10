@@ -698,14 +698,6 @@ aside .max-width li a:hover{
 .display .max-width .row .box .container .text .h a:hover{
     color: var(--purple);
 }
-.display .max-width .row .box .container .text .h a .fa-arrow-right{
-    font-size: 16px;
-    color: var(--dblue);
-    transition: all .3s ease-in-out;
-}
-.display .max-width .row .box .container .text .h a .fa-arrow-right:hover{
-    color: var(--purple);
-}
 .display .max-width .row .box .container .text .h h4{
     color: var(--purple);
     font-size: 20px;
