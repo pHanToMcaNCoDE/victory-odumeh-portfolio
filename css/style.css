@@ -655,8 +655,8 @@ aside .max-width li a:hover{
     background-color: #52ad8e;
     padding: .3%;
     margin: 2%;
-    width: 320px;
-    height: 430px;
+    width: 340px;
+    height: 450px;
 }
 .display .max-width .row .box .head-link .content{
     display: flex;
@@ -668,25 +668,10 @@ aside .max-width li a:hover{
     font-size: 35px;
     color: var(--purple);
 }
-.display .max-width .row .box .head-link .content a .fa-arrow-right{
-    font-size: 16px;
-    color: var(--dblue);
-    transition: all .3s ease-in-out;
-}
-.display .max-width .row .box .head-link .content a .fa-arrow-right:hover{
-    color: var(--purple);
-}
-.display .max-width .row .box .head-link .content a{
-    margin-left: -15%;
-    padding-left: 5px;
-    color: var(--dblue);
-    font-family: var(--Av), sans-serif;
+.display .max-width .row .box .head-link .content h6{
+    font-family: var(--sc), sans-serif;
+    font-size: 18px;
     font-weight: 400;
-    font-size: 20px;
-    text-decoration: underline;
-    transition: all .3s ease-in-out;
-}
-.display .max-width .row .box .head-link .content a:hover{
     color: var(--purple);
 }
 .display .max-width .row .box .container{
@@ -695,10 +680,45 @@ aside .max-width li a:hover{
     border-bottom-right-radius: 4px;
     padding: 20px 15px 10px 15px;
 }
+.display .max-width .row .box .container .text .h{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.display .max-width .row .box .container .text .h a{
+    margin-left: -15%;
+    padding-left: 5px;
+    color: var(--dblue);
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+.display .max-width .row .box .container .text .h a:hover{
+    color: var(--purple);
+}
+.display .max-width .row .box .container .text .h a .fa-arrow-right{
+    font-size: 16px;
+    color: var(--dblue);
+    transition: all .3s ease-in-out;
+}
+.display .max-width .row .box .container .text .h a .fa-arrow-right:hover{
+    color: var(--purple);
+}
+.display .max-width .row .box .container .text .h h4{
+    color: var(--purple);
+    font-size: 20px;
+    font-family: var(--sc), sans-serif;
+    font-weight: 400;
+    margin-right: 90px;
+}
 .display .max-width .row .box .container .text h5{
     color: var(--purple);
     font-size: 20px;
     font-family: var(--sc), sans-serif;
+    font-weight: 400;
+    /* margin-right: 90px; */
 }
 .display .max-width .row .box .container .text p{
     color: var(--white2);
