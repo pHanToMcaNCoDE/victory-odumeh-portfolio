@@ -1,0 +1,1643 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+:root{
+
+
+    /* Logo font */
+    --sc: 'Silkscreen';
+
+    /* Fonts */
+    --Av: 'Avenir';
+
+    /* COLORS */
+    --white: #fff;
+    --white2: #f0f1f1;
+    --purple: #44318D;
+    --dblue: #1F2833;
+    --black: #222629;
+    --lpurple: #E98074;
+    --lpurple2: #a5534a;
+    --black2: rgb(40, 40, 40);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(
+        to right,
+        var(--dblue) 0%,
+        var(--dblue) 50%,
+        var(--black) 50%,
+        var(--black) 100%
+    );
+}
+.max-width{
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+/* Navigation Styling */
+
+nav{
+    position: fixed;
+    padding: 15px 0;
+    height: 70px;
+    width: 100%;
+}
+nav .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .max-width .logo a{
+    text-decoration: none;
+    color: var(--purple);
+    font-family: var(--sc), sans-serif;
+}
+nav .max-width .links{
+    display: flex;
+}
+nav .max-width .links li{
+    list-style: none;
+}
+nav .max-width .links li a{
+    display: inline-block;
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 25px;
+}
+nav .max-width .links li a::after{
+    content: '';
+    display: block;
+    background-color: var(--purple);
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    transition: .5s;
+}
+nav .max-width .links li a:hover::after{
+    width: 100%;
+}
+
+/***************************************************** 
+# Menu Styling 
+*****************************************************/
+.menu{
+    display: none;
+    width: 40px;
+}
+.menu div{
+    background-color: var(--purple);
+    height: 1.5px;
+    border-radius: 10px;
+    margin: 5px 0;
+    transition: .5s;
+    cursor: pointer;
+}
+.menu .one{
+    width: 30px;
+}
+.menu .two{
+    width: 20px;
+}
+.menu .three{
+    width: 10px;
+}
+.menu:hover div{
+    width: 40px;
+}
+
+#cancel{
+    content: '';
+    position: absolute;
+    top: 3%;
+    right: 33%;
+    color: var(--purple);
+    font-size: 18px;
+    /* padding: 5px; */
+    display: none;
+}
+
+
+/* Aside Styling */
+
+
+aside{
+    position: fixed;
+    top: 40%;
+    left: 0%;
+}
+aside .max-width{
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
+}
+aside .max-width::before{
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    content: '';
+    background-color: var(--white2);
+    width: 1.5px;
+    height: 150px;
+}
+aside .max-width::after{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    content: '';
+    background-color: var(--white2);
+    width: 1.5px;
+    height: 150px;
+}
+aside .max-width li{
+    list-style: none;
+    margin-top: 40px;
+}
+aside .max-width li a{
+    font-size: 18px;
+    color: var(--white2);
+    transition: all .3s ease;
+}
+aside .max-width li a:hover{
+    color: var(--purple);
+}
+
+
+
+/************************************** 
+ # Hero & About Design 
+ **************************************/
+
+.hero{
+    height: 100vh;
+}
+.hero .max-width{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero .max-width p{
+    color: var(--white2);
+    font-size: 25px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+.hero .max-width .text-1{
+    padding-top: 5%;
+    color: var(--white2);
+    font-size: 18px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+.hero .max-width .text-2{
+    padding-top: 5%;
+    color: var(--white2);
+    font-size: 18px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+.hero .max-width h2{
+    margin-left: 40px;
+    color: var(--purple);
+    font-size: 48px;
+    font-family: var(--sc), sans-serif;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+.hero .max-width .line{
+    content: '';
+    background-color: var(--lpurple);
+    height: 1px;
+    width: 200px;
+    margin-top: 2%;
+    margin-left: 30%;
+}
+
+/************************************** 
+ # Skills Design 
+ **************************************/
+
+.skills{
+    height: 100vh;
+    padding: 20% 0 0 0;
+}
+.skills .max-width{
+    display: block;
+}
+.skills .max-width .no-1{
+    margin-top: -20%;
+    margin-left: -3%;
+    color: var(--purple);
+    font-size: 60px;
+    font-family: var(--sc), sans-serif;
+    font-weight: 400;
+}
+.skills .max-width .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .max-width .content .left{
+    width: 50%;
+    margin-left: -10%;
+}
+.skills .max-width .content .left .head-1{
+    font-size: 50px;
+    margin-left: 10%;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    color: var(--white2);
+}
+.skills .max-width .content .left .line{
+    content: '';
+    background-color: var(--lpurple);
+    height: 1px;
+    width: 100px;
+    margin-top: .5%;
+    margin-left: 10%;
+}
+.skills .max-width .content .left .text-3{
+    color: var(--white2);
+    font-size: 18px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 5% 10%;
+}
+.skills .max-width .content .right{
+    width: 40%;
+}
+.skills .max-width .content .center{
+    width: 10%;
+    position: absolute;
+    top: 128%;
+    left: 55%;
+}
+.skills .max-width .content .center .dot{
+    content: '';
+    background-color: var(--white2);
+    border-radius: 50%;
+    padding: .5%;
+    width: 4px;
+    height: 4px;
+    margin-top: 70%;
+}
+.skills .max-width .content .center .dot::after{
+    content: '';
+    display: block;
+    background-color: var(--white2);
+    width: .5px;
+    height: 110px;
+    margin-left: 35%;
+    margin-top: 5%
+} 
+.skills .max-width .content .center .dot-4::after{
+    display: none;
+}
+.skills .max-width .content .right li{
+    list-style: none;
+    padding: 5% 10%;
+}
+.skills .max-width .content .right li h5{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+.skills .max-width .content .right li p{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 2%;
+}
+
+/************************************** 
+ # Experience Design 
+ **************************************/
+
+ .exp{
+    height: 100vh;
+    padding: 15% 0 0 0;
+}
+.exp .max-width{
+    display: block;
+}
+.exp .max-width .no-1{
+    margin-top: -20%;
+    margin-left: -3%;
+    color: var(--purple);
+    font-size: 60px;
+    font-family: var(--sc), sans-serif;
+    font-weight: 400;
+}
+.exp .max-width .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exp .max-width .content .left{
+    width: 50%;
+    margin-left: -10%;
+}
+.exp .max-width .content .left .head-1{
+    font-size: 50px;
+    margin-left: 10%;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    color: var(--white2);
+}
+.exp .max-width .content .left .line{
+    content: '';
+    background-color: var(--lpurple);
+    height: 1px;
+    width: 100px;
+    margin-top: .5%;
+    margin-left: 10%;
+}
+.exp .max-width .content .left .text-3{
+    color: var(--white2);
+    font-size: 18px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 5% 10%;
+}
+.exp .max-width .content .right{
+    width: 40%;
+}
+.exp .max-width .content .center{
+    width: 10%;
+    position: absolute;
+    top: 250%;
+    left: 55%;
+}
+.exp .max-width .content .center .dot{
+    content: '';
+    display: block;
+    background-color: var(--white2);
+    border-radius: 50%;
+    padding: .5%;
+    width: 4px;
+    height: 4px;
+    margin-top: 100%;
+}
+.exp .max-width .content .center .dot::after{
+    content: '';
+    display: block;
+    background-color: var(--white2);
+    width: .5px;
+    height: 150px;
+    margin-left: 35%;
+    margin-bottom: -5%;
+}
+.exp .max-width .content .center .dott-2::after{
+    display: none;
+    background-color: none;
+}
+.exp .max-width .content .right li{
+    list-style: none;
+    padding: 5% 10%;
+}
+.exp .max-width .content .right li h5{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+.exp .max-width .content .right li p{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 2%;
+}
+
+
+/************************************** 
+ # Portfolio Design 
+ **************************************/
+.port{
+    height: 80vh;
+    padding: 30% 0 0 0;
+}
+.port .max-width{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.port .max-width .no-1{
+    margin-top: -20%;
+    margin-left: -3%;
+    color: var(--purple);
+    font-size: 60px;
+    font-family: var(--sc), sans-serif;
+    font-weight: 400;
+}
+.port .max-width .head-1{
+    font-size: 50px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    color: var(--white2);
+}
+.port .max-width .line{
+    content: '';
+    background-color: var(--lpurple);
+    height: 1px;
+    width: 100px;
+    margin-top: .5%;
+    margin-left: 46%;
+}
+.port .max-width .content p{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    padding: 2% 15%;
+}
+.port .max-width .content a{
+    color: var(--white2);
+    border: 1px solid var(--lpurple);
+    background-color: var(--lpurple);
+    font-family: var(--Av), sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 4%;
+    padding: 8px 25px;
+}
+
+
+/************************************** 
+ # Contact Design 
+ **************************************/
+ .con{
+    height: 100vh;
+    padding: 15% 0 0 0;
+}
+.con .max-width{
+    display: block;
+    /* text-align: center; */
+}
+.con .max-width .no-1{
+    margin-top: -20%;
+    margin-left: -3%;
+    color: var(--purple);
+    font-size: 60px;
+    font-family: var(--sc), sans-serif;
+    font-weight: 400;
+}
+.con .max-width .head-1{
+    font-size: 50px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    color: var(--white2);
+}
+.con .max-width .line{
+    content: '';
+    background-color: var(--lpurple);
+    height: 1px;
+    width: 100px;
+    margin-top: .5%;
+    margin-left: 5%;
+}
+.con .max-width .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.con .max-width .content .left{
+    width: 50%;
+}
+.con .max-width .content .left .text-4{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    margin-left: -20%;
+    padding: 3% 20%;
+}
+.con .max-width .content .right{
+    width: 40%;
+}
+.con .max-width .content .center{
+    width: 10%;
+    position: absolute;
+    top: 515%;
+    left: 55%;
+}
+.con .max-width .content .center .dot{
+    content: '';
+    display: block;
+    background-color: var(--white2);
+    border-radius: 50%;
+    padding: .5%;
+    width: 4px;
+    height: 4px;
+    margin-top: 70%;
+}
+.con .max-width .content .center .dot::after{
+    content: '';
+    display: block;
+    background-color: var(--white2);
+    width: .5px;
+    height: 110px;
+    margin-left: 35%;
+    margin-bottom: -5%;
+}
+.con .max-width .content .center .dott-2::after{
+    display: none;
+    background-color: none;
+}
+.con .max-width .content .right li{
+    list-style: none;
+    padding: 5% 10%;
+}
+.con .max-width .content .right li h5{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+.con .max-width .content .right li p{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 2%;
+}
+
+.con .max-width .content a{
+    color: var(--white2);
+    border: 1px solid var(--lpurple);
+    background-color: var(--lpurple);
+    font-family: var(--Av), sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 4%;
+    padding: 8px 25px;
+}
+
+
+/************************************** 
+ # Portfolio-Main Design 
+ **************************************/
+.display{
+    height: 150vh;
+    padding: 10% 0 0 0;
+}
+.display .max-width .no-1{
+    text-align: center;
+    color: var(--purple);
+    font-size: 60px;
+    font-family: var(--sc), sans-serif;
+    font-weight: 400;
+}
+.display .max-width .head-1{
+    text-align: center;
+    font-size: 50px;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    color: var(--white2);
+}
+.display .max-width .line{
+    content: '';
+    background-color: var(--lpurple);
+    height: 1px;
+    width: 100px;
+    margin-top: .5%;
+    margin-left: 48%;
+}
+.display .max-width{
+    display: block;
+}
+.display .max-width .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display .max-width .row .box{
+    flex-wrap: wrap;
+    background-color: #52ad8e;
+    padding: .3%;
+    margin: 2%;
+    width: 320px;
+    height: 430px;
+}
+.display .max-width .row .box .head-link .content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+}
+.display .max-width .row .box .head-link .content i{
+    font-size: 35px;
+    color: var(--purple);
+}
+.display .max-width .row .box .head-link .content a .fa-arrow-right{
+    font-size: 16px;
+    color: var(--dblue);
+    transition: all .3s ease-in-out;
+}
+.display .max-width .row .box .head-link .content a .fa-arrow-right:hover{
+    color: var(--purple);
+}
+.display .max-width .row .box .head-link .content a{
+    margin-left: -15%;
+    padding-left: 5px;
+    color: var(--dblue);
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: underline;
+    transition: all .3s ease-in-out;
+}
+.display .max-width .row .box .head-link .content a:hover{
+    color: var(--purple);
+}
+.display .max-width .row .box .container{
+    padding: 5%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 20px 15px 10px 15px;
+}
+.display .max-width .row .box .container .text h5{
+    color: var(--purple);
+    font-size: 20px;
+    font-family: var(--sc), sans-serif;
+}
+.display .max-width .row .box .container .text p{
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-size: 16px;
+    padding: 5%;
+    line-height: 21px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+.display .max-width .row .box .container .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display .max-width .row .box .container .links li{
+    list-style: none;
+}
+.display .max-width .row .box .container .links li a{
+    text-decoration: underline;
+    color: black;
+    font-family: var(--Av), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+}
+.display .max-width .row .box .container .links li a:hover{
+    color: var(--purple);
+}
+
+
+
+/************************************** 
+ # Footer Design 
+ **************************************/
+.foot{
+    background-color: var(--black2);
+    padding: 2%;
+}
+.foot .max-width{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.foot .max-width .left p{
+    text-align: left;
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-style: 17px;
+    font-weight: 400;
+}
+.foot .max-width .right p{
+    text-align: center;
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-style: 17px;
+    font-weight: 400;
+}
+
+
+
+
+
+/************************************** 
+ # Footer For Portfolio Page Design 
+ **************************************/
+ .footer{
+    background-color: var(--black2);
+    padding: 2%;
+}
+.footer .max-width{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer .max-width .left p{
+    text-align: left;
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-style: 17px;
+    font-weight: 400;
+}
+.footer .max-width .right p{
+    text-align: center;
+    color: var(--white2);
+    font-family: var(--Av), sans-serif;
+    font-style: 17px;
+    font-weight: 400;
+}
+
+
+
+
+/************************************** 
+ # Responsive Design 
+ **************************************/
+
+ @media only screen  and (max-width: 600px){
+
+    /* .links */
+    
+    nav .max-width .links{
+        position: absolute;
+        top: 0;
+        right: -300px;
+        background: var(--dblue);
+        padding: 50px;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+        background: var(--dblue);
+        height: 100vh;
+        width: 20vw;
+        transition: .5s;
+        z-index: 999;
+    }
+    nav .max-width .links li{
+        margin-top: 80px; 
+    }
+    nav .max-width .links li a{
+        font-size: 18px;
+    }
+
+    /* Menu and X-mark */
+
+    .menu{
+        display: block;
+    }
+    #cancel{
+        display: block;
+    }
+
+    /* Social .links */
+
+
+    aside{
+        position: absolute;
+        top: 30%;
+        left: 0%;
+    }
+    aside .max-width{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+    aside .max-width::before{
+        height: 80px;
+        position: absolute;
+        top: -60px;
+    }
+    aside .max-width::after{
+        height: 80px;
+    }
+    aside .max-width li a{
+        font-size: 15px;
+    } 
+
+    /* Hero Section */
+
+
+    .hero .max-width{
+        z-index: -1;
+    }
+    .hero .max-width p{
+        font-size: 20px;
+    }
+    .hero .max-width h2{
+        font-size: 42px;
+        margin-left: 0;
+    }
+    .hero .max-width .line{
+        width: 50px;
+    }
+    .hero .max-width .text-1{
+        font-size: 15px;
+        text-align: center;
+    }
+    .hero .max-width .text-2{
+        display: none;
+    }
+
+    /* Skills selection */
+
+
+    .skills{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .skills .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .skills .max-width .content .left{
+        width: 100%;
+    }
+    .skills .max-width .content .right{
+        width: 100%;
+    }
+    .skills .max-width .content .center{
+        display: none;
+    }
+    .skills .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .skills .max-width .content .left .head-1{
+        margin-left: 15%;
+    }
+    .skills .max-width .content .left .line{
+        margin-left: 46%;
+    }
+    .skills .max-width .no-1{
+        font-size: 40px;
+    }
+    .skills .max-width .content .left .head-1{
+        font-size: 30px;
+    }
+
+    /* Experience selection */
+
+
+    .exp{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .exp .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .exp .max-width .content .left{
+        width: 100%;
+    }
+    .exp .max-width .content .right{
+        width: 100%;
+    }
+    .exp .max-width .content .center{
+        display: none;
+    }
+    .exp .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .exp .max-width .content .left .head-1{
+        margin-left: 15%;
+    }
+    .exp .max-width .content .left .line{
+        margin-left: 46%;
+    }
+
+    /* Portfolio ::selection */
+
+    .port .max-width .content a{
+        margin-top: 5%;
+    }
+
+    /* Contact selection */
+
+
+    .con{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .con .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .con .max-width .content .left{
+        width: 100%;
+    }
+    .con .max-width .content .right{
+        width: 100%;
+    }
+    .con .max-width .content .center{
+        display: none;
+    }
+    .con .max-width .content .left .text-4{
+        padding-left: 40%;
+    }
+    .con .max-width .content .left .head-1{
+        margin-left: 8%;
+    }
+    .con .max-width .content .left .line{
+        margin-left: 40%;
+    }
+
+    /* Portfolio ::selection */
+
+
+    .display .max-width .row{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .display .max-width .row .box{
+        margin: 5% 5%; 
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .display .max-width .line{
+        margin-left: 40%;
+    }
+    
+    /* Footer ::selection */
+    
+    .footer{
+        position: absolute;
+        top: 350%;
+        right: 0;
+        left: 0;
+    }
+
+ }
+
+
+
+ @media only screen  and (max-width: 653px){
+    .display .max-width .row .box{
+        margin-left: 20%;
+    }
+ }
+
+
+
+ @media only screen  and (max-width: 700px){
+
+    /* .links */
+    
+    nav .max-width .links{
+        position: absolute;
+        top: 0;
+        right: -300px;
+        background: var(--dblue);
+        padding: 50px;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+        background: var(--dblue);
+        height: 100vh;
+        width: 20vw;
+        transition: .5s;
+        z-index: 999;
+    }
+    nav .max-width .links li{
+        margin-top: 80px; 
+    }
+    nav .max-width .links li a{
+        font-size: 18px;
+    }
+
+    /* Menu and X-mark */
+    .menu{
+        display: block;
+    }
+    #cancel{
+        display: block;
+    }
+
+    /* Social .links */
+
+
+    aside{
+        position: absolute;
+        top: 30%;
+        left: 0%;
+    }
+    aside .max-width{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+    aside .max-width::before{
+        height: 80px;
+        position: absolute;
+        top: -60px;
+    }
+    aside .max-width::after{
+        height: 80px;
+    }
+    aside .max-width li a{
+        font-size: 15px;
+    } 
+
+    /* Hero Section */
+
+
+    .hero .max-width p{
+        font-size: 20px;
+    }
+    .hero .max-width h2{
+        font-size: 42px;
+        margin-left: 0;
+    }
+    .hero .max-width .line{
+        width: 50px;
+    }
+    .hero .max-width .text-1{
+        font-size: 15px;
+        width: 100%;
+        flex: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .hero .max-width .text-2{
+        display: none;
+    }
+
+    /* Skills selection */
+
+
+    .skills{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .skills .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .skills .max-width .content .left{
+        width: 100%;
+    }
+    .skills .max-width .content .right{
+        width: 100%;
+    }
+    .skills .max-width .content .center{
+        display: none;
+    }
+    .skills .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .skills .max-width .content .left .head-1{
+        margin-left: 15%;
+    }
+    .skills .max-width .content .left .line{
+        margin-left: 46%;
+    }
+
+    /* Experience selection */
+
+
+    .exp{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .exp .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .exp .max-width .content .left{
+        width: 100%;
+    }
+    .exp .max-width .content .right{
+        width: 100%;
+    }
+    .exp .max-width .content .center{
+        display: none;
+    }
+    .exp .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .exp .max-width .content .left .head-1{
+        margin-left: 15%;
+    }
+    .exp .max-width .content .left .line{
+        margin-left: 46%;
+    }
+
+    /* Contact selection */
+
+
+    .con{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .con .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .con .max-width .content .left{
+        width: 100%;
+    }
+    .con .max-width .content .right{
+        width: 100%;
+    }
+    .con .max-width .content .center{
+        display: none;
+    }
+    .con .max-width .content .left .text-4{
+        padding-left: 40%;
+    }
+    .con .max-width .content .left .head-1{
+        margin-left: 8%;
+    }
+    .con .max-width .content .left .line{
+        margin-left: 40%;
+    }
+
+    /* Portfolio ::selection */
+
+
+    .display .max-width .row{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .display .max-width .row .box{
+        flex-direction: row;
+        flex: 100%;
+        flex-wrap: wrap;
+        margin-top: 5%;
+        margin-left: 50px;
+    }
+    .display .max-width .line{
+        margin-left: 40%;
+    }
+    
+    /* Fotter ::selection */
+    
+    .footer{
+        position: absolute;
+        top: 350%;
+        right: 0;
+        left: 0;
+    }
+ }
+
+
+
+ @media only screen  and (max-width: 800px){
+
+    /* .links */
+    
+    nav .max-width .links{
+        position: absolute;
+        top: 0;
+        right: -300px;
+        background: var(--dblue);
+        padding: 50px;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+        background: var(--dblue);
+        height: 100vh;
+        width: 20vw;
+        transition: .5s;
+        z-index: 999;
+    }
+    nav .max-width .links li{
+        margin-top: 80px; 
+    }
+    nav .max-width .links li a{
+        font-size: 18px;
+    }
+
+    /* Menu and X-mark */
+    .menu{
+        display: block;
+    }
+    #cancel{
+        display: block;
+    }
+
+    /* Social .links */
+
+
+    aside{
+        position: absolute;
+        top: 30%;
+        left: 0%;
+    }
+    aside .max-width{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+    aside .max-width::before{
+        height: 80px;
+        position: absolute;
+        top: -60px;
+    }
+    aside .max-width::after{
+        height: 80px;
+    }
+    aside .max-width li a{
+        font-size: 17px;
+    } 
+
+    /* Hero Section */
+
+
+    .hero .max-width p{
+        font-size: 20px;
+    }
+    .hero .max-width h2{
+        font-size: 48px;
+        margin-left: 0;
+    }
+    .hero .max-width .line{
+        width: 80px;
+    }
+    .hero .max-width .text-1{
+        font-size: 17px;
+        width: 100%;
+        flex: 100%;
+        flex-wrap: wrap;
+    }
+    .hero .max-width .text-2{
+        display: none;
+    }
+
+    /* Skills selection */
+
+
+    .skills{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .skills .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .skills .max-width .content .left{
+        width: 100%;
+    }
+    .skills .max-width .content .right{
+        width: 100%;
+    }
+    .skills .max-width .content .center{
+        display: none;
+    }
+    .skills .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .skills .max-width .content .left .head-1{
+        margin-left: 18%;
+    }
+    .skills .max-width .content .left .line{
+        margin-left: 48%;
+    }
+
+    /* Experience selection */
+
+
+    .exp{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .exp .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .exp .max-width .content .left{
+        width: 100%;
+    }
+    .exp .max-width .content .right{
+        width: 100%;
+    }
+    .exp .max-width .content .center{
+        display: none;
+    }
+    .exp .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .exp .max-width .content .left .head-1{
+        margin-left: 15%;
+    }
+    .exp .max-width .content .left .line{
+        margin-left: 46%;
+    }
+
+    /* Contact selection */
+
+
+    .con{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .con .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .con .max-width .content .left{
+        width: 100%;
+    }
+    .con .max-width .content .right{
+        width: 100%;
+    }
+    .con .max-width .content .center{
+        display: none;
+    }
+    .con .max-width .content .left .text-4{
+        padding-left: 40%;
+    }
+    .con .max-width .content .left .head-1{
+        margin-left: 8%;
+    }
+    .con .max-width .content .left .line{
+        margin-left: 40%;
+    }
+
+    /* Portfolio ::selection */
+
+
+    .display .max-width .row{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .display .max-width .row .box{
+        margin-left: 20%;
+        margin-top: 5%;
+        flex-direction: row;
+        flex: 100%;
+        flex-wrap: wrap;
+    }
+    .display .max-width .line{
+        margin-left: 40%;
+    }
+    
+    /* Fotter ::selection */
+    
+    .footer{
+        position: absolute;
+        top: 200%;
+        right: 0;
+        left: 0;
+        /* bottom: -300px; */
+    }
+ }
+
+
+
+ @media only screen  and (max-width: 900px){
+
+    /* .links */
+    
+    nav .max-width .links{
+        position: absolute;
+        top: 0;
+        right: -300px;
+        background: var(--dblue);
+        padding: 50px;
+        display: block;
+        justify-content: space-evenly;
+        align-items: center;
+        background: var(--dblue);
+        height: 100vh;
+        width: 20vw;
+        transition: .5s;
+        z-index: 999;
+    }
+    nav .max-width .links li{
+        margin-top: 80px; 
+    }
+    nav .max-width .links li a{
+        font-size: 18px;
+    }
+
+    /* Menu and X-mark */
+    .menu{
+        display: block;
+    }
+    #cancel{
+        display: block;
+    }
+
+    /* Social .links */
+
+
+    aside{
+        position: absolute;
+        top: 30%;
+        left: 0%;
+    }
+    aside .max-width{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+    aside .max-width::before{
+        height: 80px;
+        position: absolute;
+        top: -60px;
+    }
+    aside .max-width::after{
+        height: 80px;
+    }
+    aside .max-width li a{
+        font-size: 17px;
+    } 
+
+    /* Hero Section */
+
+
+    .hero .max-width p{
+        font-size: 20px;
+    }
+    .hero .max-width h2{
+        font-size: 48px;
+        margin-left: 0;
+    }
+    .hero .max-width .line{
+        width: 80px;
+    }
+    .hero .max-width .text-1{
+        font-size: 17px;
+        width: 100%;
+        flex: 100%;
+        flex-wrap: wrap;
+    }
+    .hero .max-width .text-2{
+        display: none;
+    }
+
+    /* Skills selection */
+
+
+    .skills{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .skills .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .skills .max-width .content .left{
+        width: 100%;
+    }
+    .skills .max-width .content .right{
+        width: 100%;
+    }
+    .skills .max-width .content .center{
+        display: none;
+    }
+    .skills .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .skills .max-width .content .left .head-1{
+        margin-left: 18%;
+    }
+    .skills .max-width .content .left .line{
+        margin-left: 48%;
+    }
+
+    /* Experience selection */
+
+
+    .exp{
+        text-align: center;
+        padding: 25% 0;
+    }
+    .exp .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .exp .max-width .content .left{
+        width: 100%;
+    }
+    .exp .max-width .content .right{
+        width: 100%;
+    }
+    .exp .max-width .content .center{
+        display: none;
+    }
+    .exp .max-width .content .left .text-3{
+        padding-left: 30%;
+    }
+    .exp .max-width .content .left .head-1{
+        margin-left: 15%;
+    }
+    .exp .max-width .content .left .line{
+        margin-left: 52%;
+    }
+
+    /* Contact selection */
+
+
+    .con{
+        text-align: center;
+        margin-top: -10%;
+    }
+    .con .max-width .content{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .con .max-width .content .left{
+        width: 100%;
+    }
+    .con .max-width .content .right{
+        width: 100%;
+    }
+    .con .max-width .content .center{
+        display: none;
+    }
+    .con .max-width .content .left .text-4{
+        padding-left: 40%;
+    }
+    .con .max-width .content .left .head-1{
+        margin-left: 1%;
+    }
+    .con .max-width .content .left .line{
+        margin-left: 43%;
+    }
+
+    /* Portfolio ::selection */
+
+
+    .display .max-width .row{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 50px;
+    }
+    .display .max-width .row .box{
+        margin-top: 5%;
+        margin-left: 25%;
+        flex-direction: row;
+        flex: 100%;
+        flex-wrap: wrap;
+    }
+    .display .max-width .line{
+        margin-left: 40%;
+    }
+    
+    /* Fotter ::selection */
+    
+    .footer{
+        position: absolute;
+        top: 450%;
+        right: 0;
+        left: 0;
+    }
+ }
