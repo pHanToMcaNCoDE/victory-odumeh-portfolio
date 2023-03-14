@@ -997,22 +997,28 @@ aside .max-width li a:hover{
         margin-left: 40%;
     }
 
-    /* Portfolio ::selection */
-
+    /* Portfolio Page */
 
     .display .max-width .row{
         display: block;
-        justify-content: space-between;
-        align-items: center;
+        /* place-items: center; */
     }
     .display .max-width .row .box{
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* .display .max-width .row .box{
         margin: 5% 5%; 
         flex-direction: column;
         flex-wrap: wrap;
     }
     .display .max-width .line{
         margin-left: 40%;
-    }
+    } */
+    /* #text-port{
+        display: none;
+    } */
     
     /* Footer ::selection */
     
