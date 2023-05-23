@@ -47,7 +47,7 @@ body{
 /* Navigation Styling */
 
 nav{
-    position: fixed;
+    position: sticky;
     padding: 15px 0;
     height: 70px;
     width: 100%;
@@ -65,6 +65,10 @@ nav .max-width .logo a{
 nav .max-width .links{
     display: flex;
 }
+nav .max-width .links.active{
+    top: 0%;
+}
+
 nav .max-width .links li{
     list-style: none;
 }
@@ -247,6 +251,7 @@ aside .max-width li a:hover{
 }
 .skills .max-width{
     display: block;
+    position: relative;
 }
 .skills .max-width .no-1{
     margin-top: -20%;
@@ -296,7 +301,7 @@ aside .max-width li a:hover{
 .skills .max-width .content .center{
     width: 10%;
     position: absolute;
-    top: 128%;
+    top: -14%;
     left: 55%;
 }
 .skills .max-width .content .center .dot{
@@ -348,6 +353,7 @@ aside .max-width li a:hover{
 }
 .exp .max-width{
     display: block;
+    position: relative;
 }
 .exp .max-width .no-1{
     margin-top: -20%;
@@ -397,7 +403,7 @@ aside .max-width li a:hover{
 .exp .max-width .content .center{
     width: 10%;
     position: absolute;
-    top: 250%;
+    top: -15%;
     left: 55%;
 }
 .exp .max-width .content .center .dot{
@@ -508,6 +514,7 @@ aside .max-width li a:hover{
 }
 .con .max-width{
     display: block;
+    position: relative;
     /* text-align: center; */
 }
 .con .max-width .no-1{
@@ -557,7 +564,7 @@ aside .max-width li a:hover{
 .con .max-width .content .center{
     width: 10%;
     position: absolute;
-    top: 515%;
+    top: -5%;
     left: 55%;
 }
 .con .max-width .content .center .dot{
@@ -586,6 +593,9 @@ aside .max-width li a:hover{
 .con .max-width .content .right li{
     list-style: none;
     padding: 5% 10%;
+}
+.con .max-width .content .right .specific {
+    display: none;
 }
 .con .max-width .content .right li h5{
     color: var(--white2);
@@ -649,9 +659,9 @@ aside .max-width li a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .display .max-width .row .box{
-    flex-wrap: wrap;
     background-color: #52ad8e;
     padding: .3%;
     margin: 2%;
@@ -808,23 +818,28 @@ aside .max-width li a:hover{
  # Responsive Design 
  **************************************/
 
- @media only screen  and (max-width: 600px){
+ @media only screen  and (min-width: 320px) and (max-width: 480px){
 
     /* .links */
-    
-    nav .max-width .links{
-        position: absolute;
-        top: 0;
-        right: -300px;
-        background: var(--dblue);
-        padding: 50px;
-        display: block;
+    nav .max-width{
+        display: flex;
         justify-content: space-evenly;
         align-items: center;
+    }
+    nav .max-width .links{
+        padding-top: 20px;
+        position: fixed;
+        top: -900%;
+        right: 0;
+        background: var(--dblue);
+        /* padding-right: 15px; */
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         background: var(--dblue);
         height: 100vh;
-        width: 20vw;
-        transition: .5s;
+        width: 99%;
         z-index: 999;
     }
     nav .max-width .links li{
@@ -841,32 +856,15 @@ aside .max-width li a:hover{
     }
     #cancel{
         display: block;
+        font-size: 20px;
+        color: var(--lpurple);
     }
 
     /* Social .links */
 
-
     aside{
-        position: absolute;
-        top: 30%;
-        left: 0%;
+        display: none;
     }
-    aside .max-width{
-        display: block;
-        align-items: center;
-        justify-content: space-between;
-    }
-    aside .max-width::before{
-        height: 80px;
-        position: absolute;
-        top: -60px;
-    }
-    aside .max-width::after{
-        height: 80px;
-    }
-    aside .max-width li a{
-        font-size: 15px;
-    } 
 
     /* Hero Section */
 
@@ -914,16 +912,17 @@ aside .max-width li a:hover{
         display: none;
     }
     .skills .max-width .content .left .text-3{
-        padding-left: 30%;
+        /* padding-left: 30%; */
+        text-align: center;
     }
     .skills .max-width .content .left .head-1{
-        margin-left: 15%;
+        text-align: center;
     }
     .skills .max-width .content .left .line{
-        margin-left: 46%;
+        display: none;
     }
     .skills .max-width .no-1{
-        font-size: 40px;
+        font-size: 35px;
     }
     .skills .max-width .content .left .head-1{
         font-size: 30px;
@@ -951,18 +950,33 @@ aside .max-width li a:hover{
         display: none;
     }
     .exp .max-width .content .left .text-3{
-        padding-left: 30%;
+        /* padding-left: 30px; */
+        text-align: center;
     }
     .exp .max-width .content .left .head-1{
-        margin-left: 15%;
+        text-align: center;
     }
     .exp .max-width .content .left .line{
-        margin-left: 46%;
+        display: none;
+    }
+    .exp .max-width .content .left .no-1 {
+        font-size: 35px;
+    }
+    .exp .max-width .content .left .head-1{
+        font-size: 30px;
     }
 
     /* Portfolio ::selection */
-
-    .port .max-width .content a{
+    .port .max-width .no-1{
+        font-size: 35px;
+    }
+    .port .max-width .head-1 {
+        font-size: 30px;
+    }
+    .port .max-width .line {
+        display: none;
+    }
+    .port .max-width .content .btn{
         margin-top: 5%;
     }
 
@@ -979,26 +993,48 @@ aside .max-width li a:hover{
         align-items: center;
     }
     .con .max-width .content .left{
-        width: 100%;
+        display: none;
     }
     .con .max-width .content .right{
         width: 100%;
+    }
+
+    .con .max-width .content .right .specific{
+        display: block;
+        font-size: 20px;
     }
     .con .max-width .content .center{
         display: none;
     }
     .con .max-width .content .left .text-4{
-        padding-left: 40%;
+        font-size: 35px;
     }
     .con .max-width .content .left .head-1{
-        margin-left: 8%;
+        font-size: 30px;
     }
     .con .max-width .content .left .line{
-        margin-left: 40%;
+        display: none;
     }
 
     /* Portfolio Page */
+    .display{
+        height: 100vh;
+    }
+    .display .max-width{
+        text-align: center;
+    }
+    .display .max-width .no-1 {
+        font-size: 35px;
+    }
 
+    .display .max-width .head-1 {
+        font-size: 30px;
+        margin-bottom: 6%;
+    }
+
+    .display .max-width .line {
+        display: none;
+    }
     .display .max-width .row{
         display: block;
         /* place-items: center; */
@@ -1007,18 +1043,89 @@ aside .max-width li a:hover{
         display: block;
         align-items: center;
         justify-content: space-between;
+        background-color: #52ad8e;
+        padding: .3%;
+        margin-top: 10%;
+        width: 240px;
+        height: 280px;
     }
-    /* .display .max-width .row .box{
-        margin: 5% 5%; 
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .display .max-width .line{
-        margin-left: 40%;
-    } */
-    /* #text-port{
-        display: none;
-    } */
+    
+        .display .max-width .row .box .head-link .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 3%;
+        }
+    
+        .display .max-width .row .box .head-link .content i {
+            font-size: 25px;
+        }
+    
+        .display .max-width .row .box .head-link .content h6 {
+            font-size: 18px;
+        }
+    
+        .display .max-width .row .box .container {
+            padding: 5%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            padding: 20px 15px 10px 15px;
+        }
+    
+        .display .max-width .row .box .container .text .h {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .display .max-width .row .box .container .text .h a {
+            font-size: 16px;
+        }
+    
+        .display .max-width .row .box .container .text .h a:hover {
+            color: var(--purple);
+        }
+    
+        .display .max-width .row .box .container .text .h h4 {
+            /* font-size: 17px; */
+            margin-top: 5%;
+            margin-bottom: 5%;
+            display: none;
+        }
+    
+        .display .max-width .row .box .container .text h5 {
+            font-size: 17px;
+        }
+    
+        .display .max-width .row .box .container .text .p-top {
+            display: none;
+        }
+        .display .max-width .row .box .container .text .p-btm {
+            font-size: 15px;
+        }
+        .display .max-width .row .box .container .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .display .max-width .row .box .container .links li {
+            list-style: none;
+        }
+    
+        .display .max-width .row .box .container .links li a {
+            text-decoration: underline;
+            color: black;
+            font-family: var(--Av), sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            text-align: center;
+        }
+    
+        .display .max-width .row .box .container .links li a:hover {
+            color: var(--purple);
+        }
     
     /* Footer ::selection */
     
@@ -1033,629 +1140,734 @@ aside .max-width li a:hover{
 
 
 
- @media only screen  and (max-width: 653px){
-    .display .max-width .row .box{
-        margin-left: 20%;
-    }
+
+ @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+     /* .links */
+     nav .max-width {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+     }
+
+     nav .max-width .links {
+         padding-top: 20px;
+         position: fixed;
+         top: -900%;
+         right: 0;
+         background: var(--dblue);
+         /* padding-right: 15px; */
+         display: block;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         background: var(--dblue);
+         height: 100vh;
+         width: 99%;
+         z-index: 999;
+     }
+
+     nav .max-width .links li {
+         margin-top: 80px;
+     }
+
+     nav .max-width .links li a {
+         font-size: 18px;
+     }
+
+     /* Menu and X-mark */
+
+     .menu {
+         display: block;
+     }
+
+     #cancel {
+         display: block;
+         font-size: 20px;
+         color: var(--lpurple);
+     }
+
+     /* Social .links */
+
+     aside {
+         display: none;
+     }
+
+     /* Hero Section */
+
+
+     .hero .max-width {
+         z-index: -1;
+     }
+
+     .hero .max-width p {
+         font-size: 20px;
+     }
+
+     .hero .max-width h2 {
+         font-size: 42px;
+         margin-left: 0;
+     }
+
+     .hero .max-width .line {
+         width: 50px;
+     }
+
+     .hero .max-width .text-1 {
+         font-size: 15px;
+         text-align: center;
+     }
+
+     .hero .max-width .text-2 {
+         display: none;
+     }
+
+     /* Skills selection */
+
+
+     .skills {
+         text-align: center;
+         padding: 25% 0;
+     }
+
+     .skills .max-width .content {
+         display: block;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     .skills .max-width .content .left {
+         width: 100%;
+     }
+
+     .skills .max-width .content .right {
+         width: 100%;
+     }
+
+     .skills .max-width .content .center {
+         display: none;
+     }
+
+     .skills .max-width .content .left .text-3 {
+         /* padding-left: 30%; */
+         text-align: center;
+     }
+
+     .skills .max-width .content .left .head-1 {
+         text-align: center;
+     }
+
+     .skills .max-width .content .left .line {
+         display: none;
+     }
+
+     .skills .max-width .no-1 {
+         font-size: 35px;
+     }
+
+     .skills .max-width .content .left .head-1 {
+         font-size: 30px;
+     }
+
+     /* Experience selection */
+
+
+     .exp {
+         text-align: center;
+         padding: 25% 0;
+     }
+
+     .exp .max-width .content {
+         display: block;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     .exp .max-width .content .left {
+         width: 100%;
+     }
+
+     .exp .max-width .content .right {
+         width: 100%;
+     }
+
+     .exp .max-width .content .center {
+         display: none;
+     }
+
+     .exp .max-width .content .left .text-3 {
+         /* padding-left: 30px; */
+         text-align: center;
+     }
+
+     .exp .max-width .content .left .head-1 {
+         text-align: center;
+     }
+
+     .exp .max-width .content .left .line {
+         display: none;
+     }
+
+     .exp .max-width .content .left .no-1 {
+         font-size: 35px;
+     }
+
+     .exp .max-width .content .left .head-1 {
+         font-size: 30px;
+     }
+
+     /* Portfolio ::selection */
+     .port .max-width .no-1 {
+         font-size: 35px;
+     }
+
+     .port .max-width .head-1 {
+         font-size: 30px;
+     }
+
+     .port .max-width .line {
+         display: none;
+     }
+
+     .port .max-width .content .btn {
+         margin-top: 5%;
+     }
+
+     /* Contact selection */
+
+
+     .con {
+         text-align: center;
+         padding: 25% 0;
+     }
+
+     .con .max-width .content {
+         display: block;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     .con .max-width .content .left {
+         display: none;
+     }
+
+     .con .max-width .content .right {
+         width: 100%;
+     }
+
+     .con .max-width .content .right .specific {
+         display: block;
+         font-size: 20px;
+     }
+
+     .con .max-width .content .center {
+         display: none;
+     }
+
+     .con .max-width .content .left .text-4 {
+         font-size: 35px;
+     }
+
+     .con .max-width .content .left .head-1 {
+         font-size: 30px;
+     }
+
+     .con .max-width .content .left .line {
+         display: none;
+     }
+
+     /* Portfolio Page */
+     .display {
+         height: 100vh;
+     }
+
+     .display .max-width {
+         text-align: center;
+     }
+
+     .display .max-width .no-1 {
+         font-size: 35px;
+     }
+
+     .display .max-width .head-1 {
+         font-size: 30px;
+         margin-bottom: 6%;
+     }
+
+     .display .max-width .line {
+         display: none;
+     }
+
+     .display .max-width .row {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         /* place-items: center; */
+     }
+
+     .display .max-width .row .box {
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #52ad8e;
+        padding: .3%;
+        margin-top: 10%;
+        width: 240px;
+        height: 280px;
+     }
+
+     .display .max-width .row .box .head-link .content {
+         display: flex;
+         padding: 3%;
+     }
+
+     .display .max-width .row .box .head-link .content i {
+         font-size: 25px;
+     }
+
+     .display .max-width .row .box .head-link .content h6 {
+         font-size: 18px;
+     }
+
+     .display .max-width .row .box .container {
+         padding: 5%;
+         border-bottom-left-radius: 4px;
+         border-bottom-right-radius: 4px;
+         padding: 20px 15px 10px 15px;
+     }
+
+     .display .max-width .row .box .container .text .h {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+         text-align: center;
+     }
+
+     .display .max-width .row .box .container .text .h a {
+         font-size: 16px;
+     }
+
+     .display .max-width .row .box .container .text .h a:hover {
+         color: var(--purple);
+     }
+
+     .display .max-width .row .box .container .text .h h4 {
+         /* font-size: 17px; */
+         margin-top: 5%;
+         margin-bottom: 5%;
+         display: none;
+     }
+
+     .display .max-width .row .box .container .text h5 {
+         font-size: 17px;
+     }
+
+     .display .max-width .row .box .container .text .p-top {
+         display: none;
+     }
+
+     .display .max-width .row .box .container .text .p-btm {
+         font-size: 15px;
+     }
+
+     .display .max-width .row .box .container .links {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     .display .max-width .row .box .container .links li {
+         list-style: none;
+     }
+
+     .display .max-width .row .box .container .links li a {
+         text-decoration: underline;
+         color: black;
+         font-family: var(--Av), sans-serif;
+         font-weight: 400;
+         font-size: 16px;
+         text-align: center;
+     }
+
+     .display .max-width .row .box .container .links li a:hover {
+         color: var(--purple);
+     }
+
+     /* Footer ::selection */
+
+     .footer {
+         position: absolute;
+         top: 350%;
+         right: 0;
+         left: 0;
+     }
+
  }
 
 
 
- @media only screen  and (max-width: 700px){
 
-    /* .links */
-    
-    nav .max-width .links{
-        position: absolute;
-        top: 0;
-        right: -300px;
-        background: var(--dblue);
-        padding: 50px;
-        display: block;
-        justify-content: space-evenly;
-        align-items: center;
-        background: var(--dblue);
-        height: 100vh;
-        width: 20vw;
-        transition: .5s;
-        z-index: 999;
-    }
-    nav .max-width .links li{
-        margin-top: 80px; 
-    }
-    nav .max-width .links li a{
-        font-size: 18px;
-    }
+ @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
-    /* Menu and X-mark */
-    .menu{
-        display: block;
-    }
-    #cancel{
-        display: block;
-    }
+     /* .links */
+     nav .max-width {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+     }
 
-    /* Social .links */
+     nav .max-width .links {
+         padding-top: 20px;
+         position: fixed;
+         top: -900%;
+         right: 0;
+         background: var(--dblue);
+         /* padding-right: 15px; */
+         display: block;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         background: var(--dblue);
+         height: 100vh;
+         width: 99%;
+         z-index: 999;
+     }
 
+     nav .max-width .links li {
+         margin-top: 80px;
+     }
 
-    aside{
-        position: absolute;
-        top: 30%;
-        left: 0%;
-    }
-    aside .max-width{
-        display: block;
-        align-items: center;
-        justify-content: space-between;
-    }
-    aside .max-width::before{
-        height: 80px;
-        position: absolute;
-        top: -60px;
-    }
-    aside .max-width::after{
-        height: 80px;
-    }
-    aside .max-width li a{
-        font-size: 15px;
-    } 
+     nav .max-width .links li a {
+         font-size: 18px;
+     }
 
-    /* Hero Section */
+     /* Menu and X-mark */
+
+     .menu {
+         display: block;
+     }
+
+     #cancel {
+         display: block;
+         font-size: 20px;
+         color: var(--lpurple);
+     }
+
+     /* Social .links */
+
+     aside {
+         display: none;
+     }
+
+     /* Hero Section */
 
 
-    .hero .max-width p{
-        font-size: 20px;
-    }
-    .hero .max-width h2{
-        font-size: 42px;
-        margin-left: 0;
-    }
-    .hero .max-width .line{
-        width: 50px;
-    }
-    .hero .max-width .text-1{
-        font-size: 15px;
-        width: 100%;
-        flex: 100%;
-        flex-wrap: wrap;
-        text-align: center;
-    }
-    .hero .max-width .text-2{
-        display: none;
-    }
+     .hero .max-width {
+         z-index: -1;
+     }
 
-    /* Skills selection */
+     .hero .max-width p {
+         font-size: 20px;
+     }
 
+     .hero .max-width h2 {
+         font-size: 45px;
+         margin-left: 0;
+     }
 
-    .skills{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .skills .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .skills .max-width .content .left{
-        width: 100%;
-    }
-    .skills .max-width .content .right{
-        width: 100%;
-    }
-    .skills .max-width .content .center{
-        display: none;
-    }
-    .skills .max-width .content .left .text-3{
-        padding-left: 30%;
-    }
-    .skills .max-width .content .left .head-1{
-        margin-left: 15%;
-    }
-    .skills .max-width .content .left .line{
-        margin-left: 46%;
-    }
+     .hero .max-width .line {
+         width: 50px;
+     }
 
-    /* Experience selection */
+     .hero .max-width .text-1 {
+         font-size: 25px;
+         /* text-align: center; */
+     }
+
+     .hero .max-width .text-2 {
+         font-size: 25px;
+     }
+
+     /* Skills selection */
 
 
-    .exp{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .exp .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .exp .max-width .content .left{
-        width: 100%;
-    }
-    .exp .max-width .content .right{
-        width: 100%;
-    }
-    .exp .max-width .content .center{
-        display: none;
-    }
-    .exp .max-width .content .left .text-3{
-        padding-left: 30%;
-    }
-    .exp .max-width .content .left .head-1{
-        margin-left: 15%;
-    }
-    .exp .max-width .content .left .line{
-        margin-left: 46%;
-    }
+     .skills {
+         text-align: center;
+         padding: 25% 0;
+     }
 
-    /* Contact selection */
+     .skills .max-width .content {
+         display: block;
+         justify-content: space-between;
+         align-items: center;
+     }
 
+     .skills .max-width .content .left {
+         width: 100%;
+     }
 
-    .con{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .con .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .con .max-width .content .left{
-        width: 100%;
-    }
-    .con .max-width .content .right{
-        width: 100%;
-    }
-    .con .max-width .content .center{
-        display: none;
-    }
-    .con .max-width .content .left .text-4{
-        padding-left: 40%;
-    }
-    .con .max-width .content .left .head-1{
-        margin-left: 8%;
-    }
-    .con .max-width .content .left .line{
-        margin-left: 40%;
-    }
+     .skills .max-width .content .right {
+         width: 100%;
+     }
 
-    /* Portfolio ::selection */
+     .skills .max-width .content .center {
+         display: none;
+     }
+
+     .skills .max-width .content .left .text-3 {
+         /* padding-left: 30%; */
+         text-align: center;
+     }
+
+     .skills .max-width .content .left .head-1 {
+         text-align: center;
+     }
+
+     .skills .max-width .content .left .line {
+         display: none;
+     }
+
+     .skills .max-width .no-1 {
+         font-size: 35px;
+     }
+
+     .skills .max-width .content .left .head-1 {
+         font-size: 30px;
+     }
+
+     /* Experience selection */
 
 
-    .display .max-width .row{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .display .max-width .row .box{
-        flex-direction: row;
-        flex: 100%;
-        flex-wrap: wrap;
-        margin-top: 5%;
-        margin-left: 50px;
-    }
-    .display .max-width .line{
-        margin-left: 40%;
-    }
-    
-    /* Fotter ::selection */
-    
-    .footer{
-        position: absolute;
-        top: 350%;
-        right: 0;
-        left: 0;
-    }
- }
+     .exp {
+         text-align: center;
+         padding: 25% 0;
+     }
+
+     .exp .max-width .content {
+         display: block;
+         justify-content: space-between;
+         align-items: center;
+     }
+
+     .exp .max-width .content .left {
+         width: 100%;
+     }
+
+     .exp .max-width .content .right {
+         width: 100%;
+     }
+
+     .exp .max-width .content .center {
+         display: none;
+     }
+
+     .exp .max-width .content .left .text-3 {
+         /* padding-left: 30px; */
+         text-align: center;
+     }
+
+     .exp .max-width .content .left .head-1 {
+         text-align: center;
+     }
+
+     .exp .max-width .content .left .line {
+         display: none;
+     }
+
+     .exp .max-width .content .left .no-1 {
+         font-size: 35px;
+     }
+
+     .exp .max-width .content .left .head-1 {
+         font-size: 30px;
+     }
+
+     /* Portfolio ::selection */
+     .port .max-width .no-1 {
+         font-size: 35px;
+     }
+
+     .port .max-width .head-1 {
+         font-size: 30px;
+     }
+
+     .port .max-width .line {
+         display: none;
+     }
+
+     .port .max-width .content .btn {
+         margin-top: 5%;
+     }
+
+     /* Contact selection */
 
 
+     .con {
+         text-align: center;
+         padding: 25% 0;
+     }
 
- @media only screen  and (max-width: 800px){
+     .con .max-width .content {
+         display: block;
+         justify-content: space-between;
+         align-items: center;
+     }
 
-    /* .links */
-    
-    nav .max-width .links{
-        position: absolute;
-        top: 0;
-        right: -300px;
-        background: var(--dblue);
-        padding: 50px;
-        display: block;
-        justify-content: space-evenly;
-        align-items: center;
-        background: var(--dblue);
-        height: 100vh;
-        width: 20vw;
-        transition: .5s;
-        z-index: 999;
-    }
-    nav .max-width .links li{
-        margin-top: 80px; 
-    }
-    nav .max-width .links li a{
-        font-size: 18px;
-    }
+     .con .max-width .content .left {
+         display: none;
+     }
 
-    /* Menu and X-mark */
-    .menu{
-        display: block;
-    }
-    #cancel{
-        display: block;
-    }
+     .con .max-width .content .right {
+         width: 100%;
+     }
 
-    /* Social .links */
+     .con .max-width .content .right .specific {
+         display: block;
+         font-size: 20px;
+     }
 
+     .con .max-width .content .center {
+         display: none;
+     }
 
-    aside{
-        position: absolute;
-        top: 30%;
-        left: 0%;
-    }
-    aside .max-width{
-        display: block;
-        align-items: center;
-        justify-content: space-between;
-    }
-    aside .max-width::before{
-        height: 80px;
-        position: absolute;
-        top: -60px;
-    }
-    aside .max-width::after{
-        height: 80px;
-    }
-    aside .max-width li a{
+     .con .max-width .content .left .text-4 {
+         font-size: 35px;
+     }
+
+     .con .max-width .content .left .head-1 {
+         font-size: 30px;
+     }
+
+     .con .max-width .content .left .line {
+         display: none;
+     }
+
+     /* Portfolio Page */
+     .display {
+         height: 100vh;
+     }
+
+     .display .max-width {
+         text-align: center;
+     }
+
+     .display .max-width .no-1 {
+         font-size: 35px;
+     }
+
+     .display .max-width .head-1 {
+         font-size: 30px;
+         margin-bottom: 6%;
+     }
+
+     .display .max-width .line {
+         display: none;
+     }
+
+     .display .max-width .row {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         /* place-items: center; */
+     }
+
+     .display .max-width .row .box {
+         display: block;
+         align-items: center;
+         justify-content: space-between;
+         background-color: #52ad8e;
+         padding: .3%;
+         margin-top: 10%;
+         width: 300px;
+         height: 470px;
+     }
+
+     .display .max-width .row .box .head-link .content {
+         display: flex;
+         padding: 3%;
+     }
+
+     .display .max-width .row .box .head-link .content i {
+         font-size: 25px;
+     }
+
+     .display .max-width .row .box .head-link .content h6 {
+         font-size: 18px;
+     }
+
+     .display .max-width .row .box .container {
+         padding: 5%;
+         border-bottom-left-radius: 4px;
+         border-bottom-right-radius: 4px;
+         padding: 20px 15px 10px 15px;
+     }
+
+     .display .max-width .row .box .container .text .h {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+         text-align: center;
+     }
+
+     .display .max-width .row .box .container .text .h a {
+         font-size: 16px;
+     }
+
+     .display .max-width .row .box .container .text .h a:hover {
+         color: var(--purple);
+     }
+
+     .display .max-width .row .box .container .text .h h4 {
+         /* font-size: 17px; */
+         margin-top: 5%;
+         margin-bottom: 5%;
+         display: none;
+     }
+
+     .display .max-width .row .box .container .text h5 {
+         font-size: 17px;
+     }
+
+     .display .max-width .row .box .container .text .p-top {
         font-size: 17px;
-    } 
+     }
 
-    /* Hero Section */
+     .display .max-width .row .box .container .text .p-btm {
+         font-size: 17px;
+     }
 
+     .display .max-width .row .box .container .links {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
 
-    .hero .max-width p{
-        font-size: 20px;
-    }
-    .hero .max-width h2{
-        font-size: 48px;
-        margin-left: 0;
-    }
-    .hero .max-width .line{
-        width: 80px;
-    }
-    .hero .max-width .text-1{
-        font-size: 17px;
-        width: 100%;
-        flex: 100%;
-        flex-wrap: wrap;
-    }
-    .hero .max-width .text-2{
-        display: none;
-    }
+     .display .max-width .row .box .container .links li {
+         list-style: none;
+     }
 
-    /* Skills selection */
+     .display .max-width .row .box .container .links li a {
+         text-decoration: underline;
+         color: black;
+         font-family: var(--Av), sans-serif;
+         font-weight: 400;
+         font-size: 16px;
+         text-align: center;
+     }
 
+     .display .max-width .row .box .container .links li a:hover {
+         color: var(--purple);
+     }
 
-    .skills{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .skills .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .skills .max-width .content .left{
-        width: 100%;
-    }
-    .skills .max-width .content .right{
-        width: 100%;
-    }
-    .skills .max-width .content .center{
-        display: none;
-    }
-    .skills .max-width .content .left .text-3{
-        padding-left: 30%;
-    }
-    .skills .max-width .content .left .head-1{
-        margin-left: 18%;
-    }
-    .skills .max-width .content .left .line{
-        margin-left: 48%;
-    }
+     /* Footer ::selection */
 
-    /* Experience selection */
+     .footer {
+         position: absolute;
+         top: 350%;
+         right: 0;
+         left: 0;
+     }
 
-
-    .exp{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .exp .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .exp .max-width .content .left{
-        width: 100%;
-    }
-    .exp .max-width .content .right{
-        width: 100%;
-    }
-    .exp .max-width .content .center{
-        display: none;
-    }
-    .exp .max-width .content .left .text-3{
-        padding-left: 30%;
-    }
-    .exp .max-width .content .left .head-1{
-        margin-left: 15%;
-    }
-    .exp .max-width .content .left .line{
-        margin-left: 46%;
-    }
-
-    /* Contact selection */
-
-
-    .con{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .con .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .con .max-width .content .left{
-        width: 100%;
-    }
-    .con .max-width .content .right{
-        width: 100%;
-    }
-    .con .max-width .content .center{
-        display: none;
-    }
-    .con .max-width .content .left .text-4{
-        padding-left: 40%;
-    }
-    .con .max-width .content .left .head-1{
-        margin-left: 8%;
-    }
-    .con .max-width .content .left .line{
-        margin-left: 40%;
-    }
-
-    /* Portfolio ::selection */
-
-
-    .display .max-width .row{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .display .max-width .row .box{
-        margin-left: 20%;
-        margin-top: 5%;
-        flex-direction: row;
-        flex: 100%;
-        flex-wrap: wrap;
-    }
-    .display .max-width .line{
-        margin-left: 40%;
-    }
-    
-    /* Fotter ::selection */
-    
-    .footer{
-        position: absolute;
-        top: 200%;
-        right: 0;
-        left: 0;
-        /* bottom: -300px; */
-    }
- }
-
-
-
- @media only screen  and (max-width: 900px){
-
-    /* .links */
-    
-    nav .max-width .links{
-        position: absolute;
-        top: 0;
-        right: -300px;
-        background: var(--dblue);
-        padding: 50px;
-        display: block;
-        justify-content: space-evenly;
-        align-items: center;
-        background: var(--dblue);
-        height: 100vh;
-        width: 20vw;
-        transition: .5s;
-        z-index: 999;
-    }
-    nav .max-width .links li{
-        margin-top: 80px; 
-    }
-    nav .max-width .links li a{
-        font-size: 18px;
-    }
-
-    /* Menu and X-mark */
-    .menu{
-        display: block;
-    }
-    #cancel{
-        display: block;
-    }
-
-    /* Social .links */
-
-
-    aside{
-        position: absolute;
-        top: 30%;
-        left: 0%;
-    }
-    aside .max-width{
-        display: block;
-        align-items: center;
-        justify-content: space-between;
-    }
-    aside .max-width::before{
-        height: 80px;
-        position: absolute;
-        top: -60px;
-    }
-    aside .max-width::after{
-        height: 80px;
-    }
-    aside .max-width li a{
-        font-size: 17px;
-    } 
-
-    /* Hero Section */
-
-
-    .hero .max-width p{
-        font-size: 20px;
-    }
-    .hero .max-width h2{
-        font-size: 48px;
-        margin-left: 0;
-    }
-    .hero .max-width .line{
-        width: 80px;
-    }
-    .hero .max-width .text-1{
-        font-size: 17px;
-        width: 100%;
-        flex: 100%;
-        flex-wrap: wrap;
-    }
-    .hero .max-width .text-2{
-        display: none;
-    }
-
-    /* Skills selection */
-
-
-    .skills{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .skills .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .skills .max-width .content .left{
-        width: 100%;
-    }
-    .skills .max-width .content .right{
-        width: 100%;
-    }
-    .skills .max-width .content .center{
-        display: none;
-    }
-    .skills .max-width .content .left .text-3{
-        padding-left: 30%;
-    }
-    .skills .max-width .content .left .head-1{
-        margin-left: 18%;
-    }
-    .skills .max-width .content .left .line{
-        margin-left: 48%;
-    }
-
-    /* Experience selection */
-
-
-    .exp{
-        text-align: center;
-        padding: 25% 0;
-    }
-    .exp .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .exp .max-width .content .left{
-        width: 100%;
-    }
-    .exp .max-width .content .right{
-        width: 100%;
-    }
-    .exp .max-width .content .center{
-        display: none;
-    }
-    .exp .max-width .content .left .text-3{
-        padding-left: 30%;
-    }
-    .exp .max-width .content .left .head-1{
-        margin-left: 15%;
-    }
-    .exp .max-width .content .left .line{
-        margin-left: 52%;
-    }
-
-    /* Contact selection */
-
-
-    .con{
-        text-align: center;
-        margin-top: -10%;
-    }
-    .con .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .con .max-width .content .left{
-        width: 100%;
-    }
-    .con .max-width .content .right{
-        width: 100%;
-    }
-    .con .max-width .content .center{
-        display: none;
-    }
-    .con .max-width .content .left .text-4{
-        padding-left: 40%;
-    }
-    .con .max-width .content .left .head-1{
-        margin-left: 1%;
-    }
-    .con .max-width .content .left .line{
-        margin-left: 43%;
-    }
-
-    /* Portfolio ::selection */
-
-
-    .display .max-width .row{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 50px;
-    }
-    .display .max-width .row .box{
-        margin-top: 5%;
-        margin-left: 25%;
-        flex-direction: row;
-        flex: 100%;
-        flex-wrap: wrap;
-    }
-    .display .max-width .line{
-        margin-left: 40%;
-    }
-    
-    /* Fotter ::selection */
-    
-    .footer{
-        position: absolute;
-        top: 450%;
-        right: 0;
-        left: 0;
-    }
  }
