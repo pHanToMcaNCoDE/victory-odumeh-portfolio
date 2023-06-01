@@ -483,11 +483,6 @@ aside .max-width li a:hover{
     margin-top: .5%;
     margin-left: 46%;
 }
-.port .max-width .row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .port .max-width .content p{
     color: var(--white2);
     font-family: var(--Av), sans-serif;
@@ -664,14 +659,14 @@ aside .max-width li a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .display .max-width .row .box{
     background-color: #52ad8e;
     padding: .3%;
     margin: 2%;
-    width: 340px;
-    height: 455px;
+    width: 100%;
+    /* height: 455px; */
 }
 .display .max-width .row .box .head-link .content{
     display: flex;
@@ -1045,19 +1040,13 @@ aside .max-width li a:hover{
     .display .max-width .line {
         display: none;
     }
-    .display .max-width .row{
+    .display .max-width .row {
         display: block;
-        /* place-items: center; */
+        justify-content: center;
+        align-items: center;
     }
     .display .max-width .row .box{
-        display: block;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #52ad8e;
-        padding: .3%;
         margin-top: 10%;
-        width: 240px;
-        height: 280px;
     }
     
         .display .max-width .row .box .head-link .content {
