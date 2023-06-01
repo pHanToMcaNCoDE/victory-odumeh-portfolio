@@ -483,6 +483,11 @@ aside .max-width li a:hover{
     margin-top: .5%;
     margin-left: 46%;
 }
+.port .max-width .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .port .max-width .content p{
     color: var(--white2);
     font-family: var(--Av), sans-serif;
@@ -975,6 +980,11 @@ aside .max-width li a:hover{
     }
     .port .max-width .line {
         display: none;
+    }
+    .port .max-width .row {
+        display: block;
+        justify-content: center;
+        align-items: center;
     }
     .port .max-width .content .btn{
         margin-top: 5%;
