@@ -1022,9 +1022,7 @@ aside .max-width li a:hover{
     }
 
     /* Portfolio Page */
-    .display{
-        height: 100vh;
-    }
+    
     .display .max-width{
         text-align: center;
     }
@@ -1129,10 +1127,7 @@ aside .max-width li a:hover{
     /* Footer ::selection */
     
     .footer{
-        position: absolute;
-        top: 350%;
-        right: 0;
-        left: 0;
+        margin-top: 210%;
     }
 
  }
