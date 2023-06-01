@@ -821,6 +821,9 @@ aside .max-width li a:hover{
  @media only screen  and (min-width: 300px) and (max-width: 480px){
 
     /* .links */
+    nav{
+        z-index: 999;
+    }
     nav .max-width{
         display: flex;
         justify-content: space-evenly;
@@ -840,7 +843,6 @@ aside .max-width li a:hover{
         background: var(--dblue);
         height: 100vh;
         width: 99%;
-        z-index: 999;
     }
     nav .max-width .links li{
         margin-top: 80px; 
