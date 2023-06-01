@@ -12,11 +12,11 @@ var mark = document.querySelector('#cancel');
 
 menu.addEventListener('click', () =>{
     links.classList.add('active');
-    links.style.transition = "all .5s ease-in-out";
+    links.style.transition = "all .3s ease-in-out";
 });
 
 
 mark.addEventListener('click', () =>{
     links.classList.remove('active');
-    links.style.transition = "all .5s ease-in-out";
+    links.style.transition = "all .3s ease-in-out";
 });
