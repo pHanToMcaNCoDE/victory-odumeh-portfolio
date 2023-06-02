@@ -1400,9 +1400,10 @@ aside .max-width li a:hover{
          display: none;
      }
     .display .max-width .row {
-        display: block;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        /* width: 100%; */
     }
     .display .max-width .row .box{
         margin-top: 10%;
