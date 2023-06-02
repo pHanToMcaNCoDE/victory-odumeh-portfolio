@@ -39,7 +39,8 @@ body{
     );
 }
 .max-width{
-    max-width: 1200px;
+    width: 100%;
+    max-width: 900px;
     padding: 0 50px;
     margin: 0 auto;
 }
@@ -72,6 +73,7 @@ nav .max-width .links.active{
 
 nav .max-width .links li{
     list-style: none;
+    margin-left: 2em;
 }
 nav .max-width .links li a{
     display: inline-block;
@@ -129,7 +131,6 @@ nav .max-width .links li a:hover::after{
     right: 33%;
     color: var(--purple);
     font-size: 18px;
-    /* padding: 5px; */
     display: none;
 }
 
@@ -176,7 +177,7 @@ aside .max-width li a{
 }
 aside .max-width li a:hover{
     color: var(--lpurple);
-}
+} 
 
 
 
@@ -201,6 +202,7 @@ aside .max-width li a:hover{
 }
 .hero .max-width .about{
     width: 100%;
+    padding: 0;
 }
 .hero .max-width .about p{
     color: var(--white2);
@@ -246,7 +248,7 @@ aside .max-width li a:hover{
     content: '';
     background-color: var(--purple);
     height: 1px;
-    width: 200px;
+    width: 50%;
     margin-top: 2%;
     margin-left: 30%;
 }
@@ -254,49 +256,42 @@ aside .max-width li a:hover{
 /************************************** 
  # Skills Design 
  **************************************/
-
-.skills{
-    height: 90vh;
-    /* padding: 20% 0 0 0; */
-}
+ .skills{
+    height: 100vh;
+    padding: 100px 0;
+ }
 .skills .max-width{
-    display: block;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
 }
-.skills .max-width .no-1{
-    margin-top: -20%;
-    margin-left: -3%;
+.skills .no-1{
     color: var(--purple);
     font-size: 60px;
     font-family: var(--sc), sans-serif;
     font-weight: 400;
+    margin: 0 5rem;
 }
-.skills .max-width .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.skills .max-width .content .left{
+.skills .max-width .left{
     width: 50%;
-    /* margin-left: -10%; */
 }
-.skills .max-width .content .left .head-1{
+.skills .max-width .left .head-1{
     font-size: 50px;
     margin-left: 10%;
     font-family: var(--Av), sans-serif;
     font-weight: 400;
     color: var(--white2);
-    margin-top: 0;
 }
-.skills .max-width .content .left .line{
+.skills .max-width .left .line{
     content: '';
     background-color: var(--lpurple);
     height: 1px;
-    width: 100px;
+    width: 50%;
     margin-top: .5%;
     margin-left: 10%;
 }
-.skills .max-width .content .left .text-3{
+.skills .max-width .left .text-3{
     color: var(--white2);
     font-size: 20px;
     font-family: var(--Av), sans-serif;
@@ -304,64 +299,44 @@ aside .max-width li a:hover{
     word-spacing: 5px;
     letter-spacing: 2px;
     line-height: 30px;
-    width: 70%;
     padding: 1rem;
 }
-.skills .max-width .content .right{
-    width: 40%;
+.skills .max-width .right{
+    width: 50%; 
 }
-.skills .max-width .content .center{
-    width: 10%;
-    position: absolute;
-    top: -5%;
-    left: 55%;
+.skills .max-width .right ol{
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    margin-left: 2em;
+    color: var(--purple);
+    font-family: var(--sc), sans-serif;
 }
-.skills .max-width .content .center .dot{
-    content: '';
-    background-color: var(--white2);
-    border-radius: 50%;
-    padding: .5%;
-    width: 4px;
-    height: 4px;
-    margin-top: 70%;
-}
-.skills .max-width .content .center .dot::after{
-    content: '';
-    display: block;
-    background-color: var(--white2);
-    width: .5px;
-    height: 110px;
-    margin-left: 35%;
-    margin-top: 5%
-} 
-.skills .max-width .content .center .dot-4::after{
-    display: none;
-}
-.skills .max-width .content .right li{
-    list-style: none;
+.skills .max-width .right ol li{
     padding: 5% 10%;
+    text-align: justify;
 }
-.skills .max-width .content .right li h5{
+.skills .max-width .right ol li h5{
     color: var(--white2);
-    font-family: var(--Av), sans-serif;
+    font-family: var(--sc), sans-serif;
     font-size: 20px;
+    padding: 1rem;
     font-weight: 400;
 }
-.skills .max-width .content .right li p{
+.skills .max-width .right ol li p{
     color: var(--white2);
     font-family: var(--Av), sans-serif;
     font-size: 20px;
     font-weight: 300;
     padding-top: 2%;
-}
+} 
 
 /************************************** 
  # Experience Design 
  **************************************/
-
+/* 
  .exp{
     height: 80vh;
-    /* padding: 15% 0 0 0; */
 }
 .exp .max-width{
     display: block;
@@ -458,13 +433,13 @@ aside .max-width li a:hover{
     font-size: 20px;
     font-weight: 300;
     padding-top: 2%;
-}
+} */
 
 
 /************************************** 
  # Portfolio Design 
  **************************************/
-.port{
+/* .port{
     height: 80vh;
     padding: 30% 0 0 0;
 }
@@ -522,21 +497,19 @@ aside .max-width li a:hover{
     color: var(--lpurple);
     border: 1px solid var(--lpurple);
     background: none;
-}
+} */
 
 /************************************** 
  # Contact Design 
  **************************************/
- .con{
+ /* .con{
     height: 80vh;
-    /* padding: 15% 0 0 0; */
 }
 .con .max-width{
     display: block;
     position: relative;
-    /* text-align: center; */
-}
-.con .max-width .no-1{
+} */
+/* .con .max-width .no-1{
     margin-top: -20%;
     margin-left: -3%;
     color: var(--purple);
@@ -645,7 +618,7 @@ aside .max-width li a:hover{
 /************************************** 
  # Portfolio-Main Design 
  **************************************/
-.display{
+/*.display{
     height: 150vh;
     padding: 10% 0 0 0;
 }
@@ -685,7 +658,6 @@ aside .max-width li a:hover{
     padding: .3%;
     margin: 2%;
     width: 100%;
-    /* height: 455px; */
 }
 .display .max-width .row .box .head-link .content{
     display: flex;
@@ -739,7 +711,6 @@ aside .max-width li a:hover{
     font-size: 20px;
     font-family: var(--sc), sans-serif;
     font-weight: 400;
-    /* margin-right: 90px; */
 }
 .display .max-width .row .box .container .text p{
     color: var(--white2);
@@ -769,13 +740,13 @@ aside .max-width li a:hover{
 .display .max-width .row .box .container .links li a:hover{
     color: var(--purple);
 }
-
+*/
 
 
 /************************************** 
  # Footer Design 
  **************************************/
-.foot{
+/*.foot{
     background-color: var(--black2);
     padding: 2rem;
     height: 10vh;
@@ -785,7 +756,6 @@ aside .max-width li a:hover{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* margin: 0 auto; */
 }
 .foot .max-width .left{
     width: 100%;
@@ -803,7 +773,6 @@ aside .max-width li a:hover{
 .foot .max-width .right ul{
     display: flex;
     flex-direction: row;
-    /* margin: 0 auto; */
 }
 .foot .max-width .right ul li{
     list-style: none;
@@ -819,7 +788,7 @@ aside .max-width li a:hover{
     font-family: var(--Av), sans-serif;
     font-style: 17px;
     font-weight: 400;
-}
+} */
 
 
 
@@ -828,7 +797,7 @@ aside .max-width li a:hover{
 /************************************** 
  # Footer For Portfolio Page Design 
  **************************************/
- .footer{
+ /* .footer{
     background-color: var(--black2);
     padding: 2%;
 }
@@ -850,7 +819,7 @@ aside .max-width li a:hover{
     font-family: var(--Av), sans-serif;
     font-style: 17px;
     font-weight: 400;
-}
+} */
 
 
 
@@ -859,12 +828,19 @@ aside .max-width li a:hover{
  # Responsive Design 
  **************************************/
 
- @media only screen  and (min-width: 300px) and (max-width: 480px){
+ @media only screen  and (min-width: 320px) and (max-width: 480px){
 
     /* .links */
+
+    .max-width {
+        width: 50%;
+        max-width: 900px;
+        padding: 0 50px;
+        margin: 0 auto;
+    } 
     nav .max-width{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
     }
     nav .max-width .links{
@@ -909,7 +885,7 @@ aside .max-width li a:hover{
     /* Hero Section */
 
     .hero{
-        max-width: 980px;
+        height: 100vh;
     }
     .hero .max-width{
         z-index: -1;
@@ -917,65 +893,78 @@ aside .max-width li a:hover{
     .hero .max-width p{
         font-size: 20px;
     }
-    .hero .max-width h2{
-        font-size: 42px;
+    .hero .max-width .about .h h2{
+        font-size: 32px;
         margin-left: 0;
     }
     .hero .max-width .line{
-        width: 50px;
+        display: none;
     }
-    .hero .max-width .text-1{
-        font-size: 15px;
+    .hero .max-width .about .text-1{
+        font-size: 18px;
         text-align: center;
     }
-    .hero .max-width .text-2{
+    .hero .max-width .about .text-2{
         display: none;
     }
 
     /* Skills selection */
 
+    .skills .max-width {
+        flex-direction: column;
+        text-align: center;
+    }
 
-    .skills{
+    .skills .no-1 {
+        font-size: 40px;
+        padding: 1rem;
         text-align: center;
-        padding: 25% 0;
     }
-    .skills .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .skills .max-width .content .left{
+
+    .skills .max-width .left {
         width: 100%;
     }
-    .skills .max-width .content .right{
-        width: 100%;
-    }
-    .skills .max-width .content .center{
-        display: none;
-    }
-    .skills .max-width .content .left .text-3{
-        /* padding-left: 30%; */
-        text-align: center;
-    }
-    .skills .max-width .content .left .head-1{
-        text-align: center;
-    }
-    .skills .max-width .content .left .line{
-        display: none;
-    }
-    .skills .max-width .no-1{
-        font-size: 35px;
-    }
-    .skills .max-width .content .left .head-1{
+
+    .skills .max-width .left .head-1 {
         font-size: 30px;
+    }
+
+    .skills .max-width .left .text-3 {
+        padding: 1rem;
+        font-size: 20px;
+    }
+
+    .skills .max-width .right {
+        width: 100%;
+    }
+
+    .skills .max-width .right ol {
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        margin: .5rem 0;
+    }
+
+    .skills .max-width .right ol li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .skills .max-width .right ol li h5 {
+        font-size: 20px;
+    }
+
+    .skills .max-width .right ol li p {
+        font-size: 20px;
     }
 
     /* Experience selection */
 
-
+/* 
     .exp{
+        height: 100vh;
         text-align: center;
-        padding: 25% 0;
+        padding: 3rem 0;
     }
     .exp .max-width .content{
         display: block;
@@ -991,10 +980,6 @@ aside .max-width li a:hover{
     .exp .max-width .content .center{
         display: none;
     }
-    .exp .max-width .content .left .text-3{
-        /* padding-left: 30px; */
-        text-align: center;
-    }
     .exp .max-width .content .left .head-1{
         text-align: center;
     }
@@ -1006,9 +991,13 @@ aside .max-width li a:hover{
     }
     .exp .max-width .content .left .head-1{
         font-size: 30px;
-    }
+    } */
 
     /* Portfolio ::selection */
+    /* .port{
+        height: 100vh;
+        padding: 18rem 0 0 0;
+    }
     .port .max-width .no-1{
         font-size: 35px;
     }
@@ -1025,14 +1014,15 @@ aside .max-width li a:hover{
     }
     .port .max-width .content .btn{
         margin-top: 5%;
-    }
+    } */
 
     /* Contact selection */
 
-
+/* 
     .con{
+        height: 80vh;
         text-align: center;
-        padding: 25% 0;
+        padding: 3rem 0;
     }
     .con .max-width .content{
         display: block;
@@ -1061,10 +1051,10 @@ aside .max-width li a:hover{
     }
     .con .max-width .content .left .line{
         display: none;
-    }
+    } */
 
     /* Portfolio Page */
-    .display{
+   /* .display{
         padding: 100px 0;
         height: 100vh;
     }
@@ -1130,7 +1120,6 @@ aside .max-width li a:hover{
         }
     
         .display .max-width .row .box .container .text .h h4 {
-            /* font-size: 17px; */
             margin-top: 5%;
             margin-bottom: 5%;
             display: none;
@@ -1167,13 +1156,13 @@ aside .max-width li a:hover{
     
         .display .max-width .row .box .container .links li a:hover {
             color: var(--purple);
-        }
+        } */
     
     /* Footer ::selection */
     
-    .footer{
+    /* .footer{
         margin-top: 60rem;
-    }
+    } */
 
  }
 
@@ -1181,12 +1170,17 @@ aside .max-width li a:hover{
 
 
  @media only screen and (min-width: 481px) and (max-width: 768px) {
-
+    .max-width {
+        width: 50%;
+        max-width: 900px;
+        padding: 0 50px;
+        margin: 0 auto;
+    }
      /* .links */
      nav .max-width {
-         display: flex;
-         justify-content: space-evenly;
-         align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
      }
 
      nav .max-width .links {
@@ -1252,60 +1246,63 @@ aside .max-width li a:hover{
          width: 50px;
      }
 
-     .hero .max-width .text-1 {
+     .hero .max-width .about .text-1 {
          font-size: 15px;
          text-align: center;
      }
 
-     .hero .max-width .text-2 {
+     .hero .max-width .about .text-2 {
          display: none;
      }
 
      /* Skills selection */
+    .skills .max-width {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .skills .no-1 {
+        font-size: 40px;
+        padding: 1rem;
+        text-align: center;
+    }
 
-     .skills {
-         text-align: center;
-         padding: 25% 0;
-     }
+    .skills .max-width .left {
+        width: 100%;
+    }
 
-     .skills .max-width .content {
-         display: block;
-         justify-content: space-between;
-         align-items: center;
-     }
+    .skills .max-width .left .head-1 {
+        font-size: 30px;
+    }
 
-     .skills .max-width .content .left {
-         width: 100%;
-     }
+    .skills .max-width .left .text-3 {
+        padding: 1rem;
+        font-size: 20px;
+    }
 
-     .skills .max-width .content .right {
-         width: 100%;
-     }
+    .skills .max-width .right {
+        width: 100%;
+    }
 
-     .skills .max-width .content .center {
-         display: none;
-     }
+    .skills .max-width .right ol {
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        margin: .5rem 0;
+    }
 
-     /* .skills .max-width .content .left .text-3 {
-        
-     } */
+    .skills .max-width .right ol li {
+        list-style: none;
+        text-align: center;
+    }
 
-     .skills .max-width .content .left .head-1 {
-         text-align: center;
-     }
+    .skills .max-width .right ol li h5 {
+        font-size: 20px;
+    }
 
-     .skills .max-width .content .left .line {
-         display: none;
-     }
-
-     .skills .max-width .no-1 {
-         font-size: 35px;
-     }
-
-     .skills .max-width .content .left .head-1 {
-         font-size: 30px;
-     }
+    .skills .max-width .right ol li p {
+        font-size: 20px;
+    }
 
      /* Experience selection */
 
@@ -1334,7 +1331,6 @@ aside .max-width li a:hover{
      }
 
      .exp .max-width .content .left .text-3 {
-         /* padding-left: 30px; */
          text-align: center;
      }
 
@@ -1355,7 +1351,7 @@ aside .max-width li a:hover{
      }
 
      /* Portfolio ::selection */
-     .port .max-width .no-1 {
+     /* .port .max-width .no-1 {
          font-size: 35px;
      }
 
@@ -1369,7 +1365,7 @@ aside .max-width li a:hover{
 
      .port .max-width .content .btn {
          margin-top: 5%;
-     }
+     } */
 
      /* Contact selection */
 
@@ -1521,9 +1517,9 @@ aside .max-width li a:hover{
      }
 
      /* Footer ::selection */
-    .footer {
+    /*.footer {
         margin-top: 160em;
-    }
+    } */
 
  }
 
@@ -1531,7 +1527,12 @@ aside .max-width li a:hover{
 
 
  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-
+    .max-width {
+        width: 50%;
+        max-width: 900px;
+        padding: 0 50px;
+        margin: 0 auto;
+    }
      /* .links */
      nav .max-width {
          display: flex;
@@ -1540,20 +1541,19 @@ aside .max-width li a:hover{
      }
 
      nav .max-width .links {
-         padding-top: 20px;
-         position: fixed;
-         top: -900%;
-         right: 0;
-         background: var(--dblue);
-         /* padding-right: 15px; */
-         display: block;
-         justify-content: center;
-         align-items: center;
-         text-align: center;
-         background: var(--dblue);
-         height: 100vh;
-         width: 99%;
-         z-index: 999;
+        padding-top: 20px;
+        position: fixed;
+        top: -900%;
+        right: 0;
+        background: var(--dblue);
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: var(--dblue);
+        height: 100vh;
+        width: 99%;
+        z-index: 999;
      }
 
      nav .max-width .links li {
@@ -1579,14 +1579,14 @@ aside .max-width li a:hover{
      /* Social .links */
 
      aside {
-         display: none;
+         display: block;
      }
 
      /* Hero Section */
 
-.hero{
-    height: 100vh;
-}
+    .hero{
+        height: 100vh;
+    }
      .hero .max-width {
          z-index: -1;
      }
@@ -1597,68 +1597,68 @@ aside .max-width li a:hover{
 
      .hero .max-width h2 {
          font-size: 45px;
-         margin-left: 0;
      }
 
      .hero .max-width .line {
-         width: 50px;
+         display: none;
      }
 
      .hero .max-width .text-1 {
-         font-size: 20px;
-         text-align: center;
+         display: none;
      }
 
      .hero .max-width .text-2 {
-         font-size: 20px;
-         text-align: center;
+        font-size: 18px;
+        text-align: center;
      }
 
      /* Skills selection */
-
-
-     .skills {
-        padding: 50% 0 0 0;
-     }
-     .skills .max-width .content {
-        display: block;
-        justify-content: space-between;
-        align-items: center;
+    .skills .max-width {
+        flex-direction: column;
         text-align: center;
-     }
-     .skills .max-width .content .left {
-         width: 100%;
-     }
+    }
 
-     .skills .max-width .content .right {
-         width: 100%;
-     }
+    .skills .no-1 {
+        font-size: 40px;
+        padding: 1rem;
+        text-align: center;
+    }
 
-     .skills .max-width .content .center {
-         display: none;
-     }
-    /* .skills .max-width .content .left .text-3 {
+    .skills .max-width .left {
         width: 100%;
-    } */
+    }
 
-     .skills .max-width .content .left .line {
-         display: none;
-     }
+    .skills .max-width .left .head-1 {
+        font-size: 30px;
+    }
 
-     .skills .max-width .no-1 {
-         font-size: 45px;
-     }
-
-     .skills .max-width .content .left .head-1 {
-         font-size: 40px;
-         text-align: center;
-     }
-    .skills .max-width .content .right li h5 {
+    .skills .max-width .left .text-3 {
+        padding: 1rem;
         font-size: 20px;
     }
 
-    .skills .max-width .content .right li p {
-        font-size: 18px;
+    .skills .max-width .right {
+        width: 100%;
+    }
+
+    .skills .max-width .right ol {
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        margin: .5rem 0;
+    }
+
+    .skills .max-width .right ol li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .skills .max-width .right ol li h5 {
+        font-size: 20px;
+    }
+
+    .skills .max-width .right ol li p {
+        font-size: 20px;
     }
 
      /* Experience selection */
@@ -1887,11 +1887,11 @@ aside .max-width li a:hover{
 
      /* Footer ::selection */
 
-     .footer {
+     /*.footer {
          position: absolute;
          top: 350%;
          right: 0;
          left: 0;
-     }
+     } */
 
  }
