@@ -51,6 +51,7 @@ nav{
     padding: 15px 0;
     height: 70px;
     width: 100%;
+    z-index: 999;
 }
 nav .max-width{
     display: flex;
@@ -188,12 +189,16 @@ aside .max-width li a:hover{
 }
 .hero .max-width{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
     justify-content: space-between;
     align-items: center;
+    width: 50%;
+    /* max-width: 500px; */
+    /* margin: 0 auto; */
+    text-align: center;
 }
 .hero .max-width p{
     color: var(--white2);
@@ -223,10 +228,13 @@ aside .max-width li a:hover{
     letter-spacing: 2px;
     line-height: 30px;
 }
-.hero .max-width h2{
-    margin-left: 40px;
+.hero .max-width .h{
+    width: 100%;
+}
+.hero .max-width .h h2{
+    margin-left: 48px;
     color: var(--lpurple);
-    font-size: 48px;
+    font-size: 45px;
     font-family: var(--sc), sans-serif;
     font-weight: 400;
     word-spacing: 5px;
@@ -268,7 +276,7 @@ aside .max-width li a:hover{
 }
 .skills .max-width .content .left{
     width: 50%;
-    margin-left: -10%;
+    /* margin-left: -10%; */
 }
 .skills .max-width .content .left .head-1{
     font-size: 50px;
@@ -276,6 +284,7 @@ aside .max-width li a:hover{
     font-family: var(--Av), sans-serif;
     font-weight: 400;
     color: var(--white2);
+    margin-top: 0;
 }
 .skills .max-width .content .left .line{
     content: '';
@@ -287,13 +296,16 @@ aside .max-width li a:hover{
 }
 .skills .max-width .content .left .text-3{
     color: var(--white2);
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--Av), sans-serif;
     font-weight: 400;
     word-spacing: 5px;
     letter-spacing: 2px;
     line-height: 30px;
-    padding: 5% 10%;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    /* padding: 3rem 5rem 3rem 3rem; */
 }
 .skills .max-width .content .right{
     width: 40%;
@@ -395,7 +407,8 @@ aside .max-width li a:hover{
     word-spacing: 5px;
     letter-spacing: 2px;
     line-height: 30px;
-    padding: 5% 10%;
+    width: 100%;
+    text-align: center;
 }
 .exp .max-width .content .right{
     width: 40%;
@@ -659,7 +672,6 @@ aside .max-width li a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
 }
 .display .max-width .row .box{
     max-width: 400px;
@@ -822,9 +834,6 @@ aside .max-width li a:hover{
  @media only screen  and (min-width: 300px) and (max-width: 480px){
 
     /* .links */
-    nav{
-        z-index: 999;
-    }
     nav .max-width{
         display: flex;
         justify-content: space-evenly;
@@ -1250,10 +1259,9 @@ aside .max-width li a:hover{
          display: none;
      }
 
-     .skills .max-width .content .left .text-3 {
-         /* padding-left: 30%; */
-         text-align: center;
-     }
+     /* .skills .max-width .content .left .text-3 {
+        
+     } */
 
      .skills .max-width .content .left .head-1 {
          text-align: center;
@@ -1403,7 +1411,6 @@ aside .max-width li a:hover{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* width: 100%; */
     }
     .display .max-width .row .box{
         margin-top: 10%;
@@ -1448,7 +1455,6 @@ aside .max-width li a:hover{
          font-size: 17px;
          margin-top: 5%;
          margin-bottom: 5%;
-         /* display: none; */
      }
 
      .display .max-width .row .box .container .text h5 {
@@ -1550,7 +1556,9 @@ aside .max-width li a:hover{
 
      /* Hero Section */
 
-
+.hero{
+    height: 100vh;
+}
      .hero .max-width {
          z-index: -1;
      }
@@ -1569,28 +1577,27 @@ aside .max-width li a:hover{
      }
 
      .hero .max-width .text-1 {
-         font-size: 25px;
-         /* text-align: center; */
+         font-size: 20px;
+         text-align: center;
      }
 
      .hero .max-width .text-2 {
-         font-size: 25px;
+         font-size: 20px;
+         text-align: center;
      }
 
      /* Skills selection */
 
 
      .skills {
-         text-align: center;
-         padding: 25% 0;
+        padding: 50% 0 0 0;
      }
-
      .skills .max-width .content {
-         display: block;
-         justify-content: space-between;
-         align-items: center;
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
      }
-
      .skills .max-width .content .left {
          width: 100%;
      }
@@ -1602,27 +1609,29 @@ aside .max-width li a:hover{
      .skills .max-width .content .center {
          display: none;
      }
-
-     .skills .max-width .content .left .text-3 {
-         /* padding-left: 30%; */
-         text-align: center;
-     }
-
-     .skills .max-width .content .left .head-1 {
-         text-align: center;
-     }
+    /* .skills .max-width .content .left .text-3 {
+        width: 100%;
+    } */
 
      .skills .max-width .content .left .line {
          display: none;
      }
 
      .skills .max-width .no-1 {
-         font-size: 35px;
+         font-size: 45px;
      }
 
      .skills .max-width .content .left .head-1 {
-         font-size: 30px;
+         font-size: 40px;
+         text-align: center;
      }
+    .skills .max-width .content .right li h5 {
+        font-size: 20px;
+    }
+
+    .skills .max-width .content .right li p {
+        font-size: 18px;
+    }
 
      /* Experience selection */
 
@@ -1650,10 +1659,8 @@ aside .max-width li a:hover{
          display: none;
      }
 
-     .exp .max-width .content .left .text-3 {
-         /* padding-left: 30px; */
-         text-align: center;
-     }
+     /* .exp .max-width .content .left .text-3 {
+     } */
 
      .exp .max-width .content .left .head-1 {
          text-align: center;
@@ -1672,6 +1679,7 @@ aside .max-width li a:hover{
      }
 
      /* Portfolio ::selection */
+
      .port .max-width .no-1 {
          font-size: 35px;
      }
@@ -1733,12 +1741,12 @@ aside .max-width li a:hover{
 
      /* Portfolio Page */
      .display {
-         height: 100vh;
+        height: 80vh;
      }
 
-     .display .max-width {
+     /* .display .max-width {
          text-align: center;
-     }
+     } */
 
      .display .max-width .no-1 {
          font-size: 35px;
@@ -1755,10 +1763,10 @@ aside .max-width li a:hover{
 
      .display .max-width .row {
          display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
          justify-content: space-between;
          align-items: center;
-         flex-wrap: wrap;
-         /* place-items: center; */
      }
 
      .display .max-width .row .box {
