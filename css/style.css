@@ -38,6 +38,20 @@ body{
         var(--black) 100%
     );
 }
+.arrow-up{
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow-up i{
+    margin-top: 2rem;
+    font-size: 30px;
+    color: var(--lpurple);
+}
 .max-width{
     width: 100%;
     max-width: 900px;
@@ -771,6 +785,9 @@ aside .max-width li a:hover{
 
  @media only screen  and (min-width: 320px) and (max-width: 480px){
 
+    .arrow-up{
+        display: none;
+    }
     /* .links */
 
     .max-width {
@@ -1163,6 +1180,10 @@ aside .max-width li a:hover{
         padding: 0 50px;
         margin: 0 auto;
     }
+        .arrow-up{
+            position: fixed;
+            right: 15%;
+        }
 
      /* .links */
 
@@ -1535,9 +1556,11 @@ aside .max-width li a:hover{
      }
 
      /* Footer ::selection */
-    .footer {
-        
-    }
+        .foot {
+            background-color: var(--black2);
+            padding: 1rem;
+            height: 14vh;
+        }
 
  }
 
@@ -1771,46 +1794,47 @@ aside .max-width li a:hover{
 
      /* Contact selection */
 
+    .con {
+        padding: 100px 0;
+    }
 
-     .con {
-         text-align: center;
-         padding: 25% 0;
-     }
+    .con .no-1 {
+        text-align: center;
+        padding: 2rem;
+    }
 
-     .con .max-width .content {
-         display: block;
-         justify-content: space-between;
-         align-items: center;
-     }
+    .con .max-width {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-     .con .max-width .content .left {
-         display: none;
-     }
+    .con .max-width .left {
+        width: 100%;
+        text-align: center;
+    }
 
-     .con .max-width .content .right {
-         width: 100%;
-     }
+    .con .max-width .right {
+        width: 100%;
+        text-align: center;
+        margin: .5rem 0;
+    }
 
-     .con .max-width .content .right .specific {
-         display: block;
-         font-size: 20px;
-     }
+    .con .max-width .right li {
+        list-style: none;
+    }
 
-     .con .max-width .content .center {
-         display: none;
-     }
+    .con .max-width .left .text-4 {
+        font-size: 20px;
+    }
 
-     .con .max-width .content .left .text-4 {
-         font-size: 35px;
-     }
+    .con .max-width .left .head-1 {
+        font-size: 35px;
+    }
 
-     .con .max-width .content .left .head-1 {
-         font-size: 30px;
-     }
-
-     .con .max-width .content .left .line {
-         display: none;
-     }
+    .con .max-width .left .line {
+        display: none;
+    }
 
      /* Portfolio Page */
 
