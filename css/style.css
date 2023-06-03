@@ -196,8 +196,6 @@ aside .max-width li a:hover{
     display: block;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 100%; */
-    /* width: 70%; */
     text-align: center;
 }
 .hero .max-width .about{
@@ -248,9 +246,8 @@ aside .max-width li a:hover{
     content: '';
     background-color: var(--purple);
     height: 1px;
-    width: 50%;
-    margin-top: 2%;
-    margin-left: 30%;
+    width: 30%;
+    margin: 0 auto;
 }
 
 /************************************** 
@@ -287,7 +284,7 @@ aside .max-width li a:hover{
     content: '';
     background-color: var(--lpurple);
     height: 1px;
-    width: 50%;
+    width: 30%;
     margin-top: .5%;
     margin-left: 10%;
 }
@@ -320,7 +317,7 @@ aside .max-width li a:hover{
     color: var(--white2);
     font-family: var(--sc), sans-serif;
     font-size: 20px;
-    padding: 1rem;
+    padding-top: 1rem;
     font-weight: 400;
 }
 .skills .max-width .right ol li p{
@@ -334,47 +331,42 @@ aside .max-width li a:hover{
 /************************************** 
  # Experience Design 
  **************************************/
-/* 
  .exp{
-    height: 80vh;
+    height: 100vh;
+    padding: 100px 0;
 }
 .exp .max-width{
-    display: block;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.exp .max-width .no-1{
-    margin-top: -20%;
-    margin-left: -3%;
+.exp .no-1{
     color: var(--purple);
     font-size: 60px;
     font-family: var(--sc), sans-serif;
     font-weight: 400;
+    margin: 0 5rem;
 }
-.exp .max-width .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.exp .max-width .content .left{
+.exp .max-width .left{
     width: 50%;
-    margin-left: -10%;
 }
-.exp .max-width .content .left .head-1{
+.exp .max-width .left .head-1{
     font-size: 50px;
     margin-left: 10%;
     font-family: var(--Av), sans-serif;
     font-weight: 400;
     color: var(--white2);
 }
-.exp .max-width .content .left .line{
+.exp .max-width .left .line{
     content: '';
     background-color: var(--lpurple);
     height: 1px;
-    width: 100px;
+    width: 30%;
     margin-top: .5%;
     margin-left: 10%;
 }
-.exp .max-width .content .left .text-3{
+.exp .max-width .left .text-3{
     color: var(--white2);
     font-size: 20px;
     font-family: var(--Av), sans-serif;
@@ -382,76 +374,54 @@ aside .max-width li a:hover{
     word-spacing: 5px;
     letter-spacing: 2px;
     line-height: 30px;
-    width: 70%;
     padding: 1rem;
 }
-.exp .max-width .content .right{
-    width: 40%;
+.exp .max-width .right{
+    width: 50%;
 }
-.exp .max-width .content .center{
-    width: 10%;
-    position: absolute;
-    top: -15%;
-    left: 55%;
+.exp .max-width .right ol{
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    margin-left: 2em;
+    color: var(--purple);
+    font-family: var(--sc), sans-serif;
 }
-.exp .max-width .content .center .dot{
-    content: '';
-    display: block;
-    background-color: var(--white2);
-    border-radius: 50%;
-    padding: .5%;
-    width: 4px;
-    height: 4px;
-    margin-top: 100%;
-}
-.exp .max-width .content .center .dot::after{
-    content: '';
-    display: block;
-    background-color: var(--white2);
-    width: .5px;
-    height: 150px;
-    margin-left: 35%;
-    margin-bottom: -5%;
-}
-.exp .max-width .content .center .dott-2::after{
-    display: none;
-    background-color: none;
-}
-.exp .max-width .content .right li{
-    list-style: none;
+.exp .max-width .right ol li{
     padding: 5% 10%;
+    text-align: justify;
 }
-.exp .max-width .content .right li h5{
+.exp .max-width .right ol li h5{
     color: var(--white2);
-    font-family: var(--Av), sans-serif;
+    font-family: var(--sc), sans-serif;
     font-size: 20px;
     font-weight: 400;
+    padding-top: 1rem;
 }
-.exp .max-width .content .right li p{
+.exp .max-width .right ol li p{
     color: var(--white2);
     font-family: var(--Av), sans-serif;
     font-size: 20px;
     font-weight: 300;
-    padding-top: 2%;
-} */
+    padding-top: 1rem;
+} 
 
 
 /************************************** 
  # Portfolio Design 
  **************************************/
-/* .port{
-    height: 80vh;
-    padding: 30% 0 0 0;
+.port{
+    height: 100vh;
+    padding: 100px 0;
 }
 .port .max-width{
-    display: block;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
-.port .max-width .no-1{
-    margin-top: -20%;
-    margin-left: -3%;
+.port .no-1{
+    text-align: center;
     color: var(--purple);
     font-size: 60px;
     font-family: var(--sc), sans-serif;
@@ -468,8 +438,7 @@ aside .max-width li a:hover{
     background-color: var(--lpurple);
     height: 1px;
     width: 100px;
-    margin-top: .5%;
-    margin-left: 46%;
+    margin: 0 auto;
 }
 .port .max-width .content p{
     color: var(--white2);
@@ -479,7 +448,7 @@ aside .max-width li a:hover{
     word-spacing: 5px;
     letter-spacing: 2px;
     line-height: 30px;
-    padding: 2% 15%;
+    padding: 2rem;
 }
 .port .max-width .content a{
     color: var(--white2);
@@ -488,7 +457,7 @@ aside .max-width li a:hover{
     font-family: var(--Av), sans-serif;
     font-size: 19px;
     font-weight: 400;
-    margin-top: 4%;
+    margin-top: 3rem;
     padding: 12px 25px;
     transition: all .3s ease;
 }
@@ -497,21 +466,25 @@ aside .max-width li a:hover{
     color: var(--lpurple);
     border: 1px solid var(--lpurple);
     background: none;
-} */
+} 
+
 
 /************************************** 
  # Contact Design 
  **************************************/
- /* .con{
-    height: 80vh;
+
+
+.con{
+    height: 100vh;
+    padding: 100px 0;
 }
 .con .max-width{
-    display: block;
+    display: flex;
+    justify-content: space-between;
     position: relative;
-} */
-/* .con .max-width .no-1{
-    margin-top: -20%;
-    margin-left: -3%;
+}
+.con .no-1{
+    margin: 0 5rem;
     color: var(--purple);
     font-size: 60px;
     font-family: var(--sc), sans-serif;
@@ -531,15 +504,11 @@ aside .max-width li a:hover{
     margin-top: .5%;
     margin-left: 5%;
 }
-.con .max-width .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.con .max-width .content .left{
+.con .max-width .left{
     width: 50%;
 }
-.con .max-width .content .left .text-4{
+.con .max-width .left .text-4{
+    padding-top: 2rem;
     color: var(--white2);
     font-family: var(--Av), sans-serif;
     font-size: 20px;
@@ -547,55 +516,30 @@ aside .max-width li a:hover{
     word-spacing: 5px;
     letter-spacing: 2px;
     line-height: 30px;
-    margin-left: -20%;
-    padding: 3% 20%;
 }
-.con .max-width .content .right{
-    width: 40%;
+.con .max-width .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    margin-left: 5em;
+    color: var(--purple);
+    font-family: var(--sc), sans-serif;
+
 }
-.con .max-width .content .center{
-    width: 10%;
-    position: absolute;
-    top: -5%;
-    left: 55%;
-}
-.con .max-width .content .center .dot{
-    content: '';
-    display: block;
-    background-color: var(--white2);
-    border-radius: 50%;
-    padding: .5%;
-    width: 4px;
-    height: 4px;
-    margin-top: 70%;
-}
-.con .max-width .content .center .dot::after{
-    content: '';
-    display: block;
-    background-color: var(--white2);
-    width: .5px;
-    height: 110px;
-    margin-left: 35%;
-    margin-bottom: -5%;
-}
-.con .max-width .content .center .dott-2::after{
-    display: none;
-    background-color: none;
-}
-.con .max-width .content .right li{
-    list-style: none;
+.con .max-width .right li{
     padding: 5% 10%;
 }
-.con .max-width .content .right .specific {
+.con .max-width .right .specific {
     display: none;
 }
-.con .max-width .content .right li h5{
+.con .max-width .right li h5{
     color: var(--white2);
     font-family: var(--Av), sans-serif;
     font-size: 20px;
     font-weight: 400;
 }
-.con .max-width .content .right li p{
+.con .max-width .right li p{
     color: var(--white2);
     font-family: var(--Av), sans-serif;
     font-size: 20px;
@@ -603,7 +547,7 @@ aside .max-width li a:hover{
     padding-top: 2%;
 }
 
-.con .max-width .content a{
+.con .max-width a{
     color: var(--white2);
     border: 1px solid var(--lpurple);
     background-color: var(--lpurple);
@@ -618,7 +562,9 @@ aside .max-width li a:hover{
 /************************************** 
  # Portfolio-Main Design 
  **************************************/
-/*.display{
+
+
+.display{
     height: 150vh;
     padding: 10% 0 0 0;
 }
@@ -740,16 +686,17 @@ aside .max-width li a:hover{
 .display .max-width .row .box .container .links li a:hover{
     color: var(--purple);
 }
-*/
+
 
 
 /************************************** 
  # Footer Design 
  **************************************/
-/*.foot{
+
+.foot{
     background-color: var(--black2);
-    padding: 2rem;
-    height: 10vh;
+    padding: 1rem;
+    height: 9vh;
 }
 .foot .max-width{
     display: flex;
@@ -757,69 +704,63 @@ aside .max-width li a:hover{
     justify-content: space-between;
     align-items: center;
 }
-.foot .max-width .left{
+.foot .max-width .up{
     width: 100%;
 }
-.foot .max-width .left p{
-    text-align: left;
+.foot .max-width .up p{
     color: var(--white2);
+    text-align: center;
     font-family: var(--Av), sans-serif;
-    font-style: 17px;
+    font-style: 18px;
     font-weight: 400;
 }
-.foot .max-width .right{
-    width: 100%;
+.foot .max-width .up p a {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--lpurple);
+    display: inline-block;
 }
-.foot .max-width .right ul{
+.foot .max-width .up p a::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 1px;
+    border-radius: 10px;
+    background-color: var(--lpurple);
+    transition: all .3s ease;
+}
+.foot .max-width .up p a:hover::after {
+    width: 100%;
+    height: 1px;
+}
+.foot .max-width .down{
+    width: 100%;
     display: flex;
     flex-direction: row;
 }
-.foot .max-width .right ul li{
+.foot .max-width .down li{
     list-style: none;
+    margin: .6rem auto;
 }
-.foot .max-width .right ul li a{
-    font-size: 20px;
+.foot .max-width .down li a{
+    font-size: 24px;
     color: var(--white);
-    margin-left: 2rem;
+    margin-left: 1rem;
+    transition: all .3s ease;
 }
-.foot .max-width .right p{
+.foot .max-width .down li a:hover,
+.foot .max-width .down li a:focus{
+    color: var(--lpurple);
+}
+.foot .max-width .down p{
     text-align: center;
     color: var(--white2);
     font-family: var(--Av), sans-serif;
     font-style: 17px;
     font-weight: 400;
-} */
+} 
 
 
-
-
-
-/************************************** 
- # Footer For Portfolio Page Design 
- **************************************/
- /* .footer{
-    background-color: var(--black2);
-    padding: 2%;
-}
-.footer .max-width{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.footer .max-width .left p{
-    text-align: left;
-    color: var(--white2);
-    font-family: var(--Av), sans-serif;
-    font-style: 17px;
-    font-weight: 400;
-}
-.footer .max-width .right p{
-    text-align: center;
-    color: var(--white2);
-    font-family: var(--Av), sans-serif;
-    font-style: 17px;
-    font-weight: 400;
-} */
 
 
 
@@ -838,6 +779,12 @@ aside .max-width li a:hover{
         padding: 0 50px;
         margin: 0 auto;
     } 
+
+    nav .max-width .logo{
+        margin-right: 2rem;
+        text-align-last: left;
+    } 
+
     nav .max-width{
         display: flex;
         justify-content: space-between;
@@ -849,7 +796,6 @@ aside .max-width li a:hover{
         top: -900%;
         right: 0;
         background: var(--dblue);
-        /* padding-right: 15px; */
         display: block;
         justify-content: center;
         align-items: center;
@@ -884,9 +830,7 @@ aside .max-width li a:hover{
 
     /* Hero Section */
 
-    .hero{
-        height: 100vh;
-    }
+    
     .hero .max-width{
         z-index: -1;
     }
@@ -908,8 +852,12 @@ aside .max-width li a:hover{
         display: none;
     }
 
+
     /* Skills selection */
 
+    .skills{
+        height: 150vh;
+    }
     .skills .max-width {
         flex-direction: column;
         text-align: center;
@@ -929,6 +877,10 @@ aside .max-width li a:hover{
         font-size: 30px;
     }
 
+    .skills .max-width .left .line{
+        margin: 0 auto;
+        width: 40%;
+    }
     .skills .max-width .left .text-3 {
         padding: 1rem;
         font-size: 20px;
@@ -958,54 +910,87 @@ aside .max-width li a:hover{
         font-size: 20px;
     }
 
+
     /* Experience selection */
 
-/* 
     .exp{
-        height: 100vh;
-        text-align: center;
-        padding: 3rem 0;
+        height: 150vh;
     }
-    .exp .max-width .content{
-        display: block;
-        justify-content: space-between;
-        align-items: center;
+    .exp .max-width {
+        display: flex;
+        flex-direction: column;
     }
-    .exp .max-width .content .left{
-        width: 100%;
-    }
-    .exp .max-width .content .right{
-        width: 100%;
-    }
-    .exp .max-width .content .center{
-        display: none;
-    }
-    .exp .max-width .content .left .head-1{
-        text-align: center;
-    }
-    .exp .max-width .content .left .line{
-        display: none;
-    }
-    .exp .max-width .content .left .no-1 {
-        font-size: 35px;
-    }
-    .exp .max-width .content .left .head-1{
-        font-size: 30px;
-    } */
 
-    /* Portfolio ::selection */
-    /* .port{
-        height: 100vh;
-        padding: 18rem 0 0 0;
+    .exp .no-1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .exp .max-width .left {
+        width: 100%;
+    }
+
+    .exp .max-width .left .head-1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .exp .max-width .left .line {
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .exp .max-width .left .text-3 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .exp .max-width .right {
+        width: 100%;
+    }
+
+    .exp .max-width .right ol {
+        display: flex;
+        flex-direction: column;
+        margin: .5rem 0;
+    }
+
+    .exp .max-width .right ol li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .exp .max-width .right ol li h5 {
+        color: var(--white2);
+        font-family: var(--sc), sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 1rem;
+    }
+
+    .exp .max-width .right ol li p {
+        color: var(--white2);
+        font-family: var(--Av), sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        padding-top: 1rem;
+    }
+
+    /* Portfolio section */
+
+
+    .port{
+        padding: 100px 0;
     }
     .port .max-width .no-1{
-        font-size: 35px;
+        font-size: 30px;
     }
     .port .max-width .head-1 {
         font-size: 30px;
     }
     .port .max-width .line {
-        display: none;
+        margin: 0 auto;
+        width: 40%;
     }
     .port .max-width .row {
         display: block;
@@ -1014,47 +999,46 @@ aside .max-width li a:hover{
     }
     .port .max-width .content .btn{
         margin-top: 5%;
-    } */
+    } 
+
 
     /* Contact selection */
 
-/* 
     .con{
-        height: 80vh;
-        text-align: center;
-        padding: 3rem 0;
+        padding: 100px 0;
     }
-    .con .max-width .content{
-        display: block;
-        justify-content: space-between;
+    .con .max-width{
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
-    .con .max-width .content .left{
-        display: none;
-    }
-    .con .max-width .content .right{
+    .con .max-width .left{
         width: 100%;
+        text-align: center;
     }
-
-    .con .max-width .content .right .specific{
-        display: block;
+    .con .max-width .right{
+        width: 100%;
+        text-align: center;
+        margin: .5rem 0;
+    }
+    .con .max-width .right li{
+        list-style: none;
+    }
+    .con .max-width .left .text-4{
         font-size: 20px;
     }
-    .con .max-width .content .center{
+    .con .max-width .left .head-1{
+        font-size: 20px;
+    }
+    .con .max-width .left .line{
         display: none;
-    }
-    .con .max-width .content .left .text-4{
-        font-size: 35px;
-    }
-    .con .max-width .content .left .head-1{
-        font-size: 30px;
-    }
-    .con .max-width .content .left .line{
-        display: none;
-    } */
+    } 
+
 
     /* Portfolio Page */
-   /* .display{
+
+
+   .display{
         padding: 100px 0;
         height: 100vh;
     }
@@ -1082,87 +1066,90 @@ aside .max-width li a:hover{
         margin-top: 10%;
     }
     
-        .display .max-width .row .box .head-link .content {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 3%;
-        }
-    
-        .display .max-width .row .box .head-link .content i {
-            font-size: 25px;
-        }
-    
-        .display .max-width .row .box .head-link .content h6 {
-            font-size: 18px;
-        }
-    
-        .display .max-width .row .box .container {
-            padding: 5%;
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-            padding: 20px 15px 10px 15px;
-        }
-    
-        .display .max-width .row .box .container .text .h {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            text-align: center;
-        }
-    
-        .display .max-width .row .box .container .text .h a {
-            font-size: 16px;
-        }
-    
-        .display .max-width .row .box .container .text .h a:hover {
-            color: var(--purple);
-        }
-    
-        .display .max-width .row .box .container .text .h h4 {
-            margin-top: 5%;
-            margin-bottom: 5%;
-            display: none;
-        }
-    
-        .display .max-width .row .box .container .text h5 {
-            font-size: 17px;
-        }
-    
-        .display .max-width .row .box .container .text .p-top {
-            display: none;
-        }
-        .display .max-width .row .box .container .text .p-btm {
-            font-size: 15px;
-        }
-        .display .max-width .row .box .container .links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    
-        .display .max-width .row .box .container .links li {
-            list-style: none;
-        }
-    
-        .display .max-width .row .box .container .links li a {
-            text-decoration: underline;
-            color: black;
-            font-family: var(--Av), sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            text-align: center;
-        }
-    
-        .display .max-width .row .box .container .links li a:hover {
-            color: var(--purple);
-        } */
+    .display .max-width .row .box .head-link .content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3%;
+    }
+
+    .display .max-width .row .box .head-link .content i {
+        font-size: 25px;
+    }
+
+    .display .max-width .row .box .head-link .content h6 {
+        font-size: 18px;
+    }
+
+    .display .max-width .row .box .container {
+        padding: 5%;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding: 20px 15px 10px 15px;
+    }
+
+    .display .max-width .row .box .container .text .h {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .display .max-width .row .box .container .text .h a {
+        font-size: 16px;
+    }
+
+    .display .max-width .row .box .container .text .h a:hover {
+        color: var(--purple);
+    }
+
+    .display .max-width .row .box .container .text .h h4 {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: none;
+    }
+
+    .display .max-width .row .box .container .text h5 {
+        font-size: 17px;
+    }
+
+    .display .max-width .row .box .container .text .p-top {
+        display: none;
+    }
+    .display .max-width .row .box .container .text .p-btm {
+        font-size: 15px;
+    }
+    .display .max-width .row .box .container .links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .display .max-width .row .box .container .links li {
+        list-style: none;
+    }
+
+    .display .max-width .row .box .container .links li a {
+        text-decoration: underline;
+        color: black;
+        font-family: var(--Av), sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .display .max-width .row .box .container .links li a:hover {
+        color: var(--purple);
+    } 
     
     /* Footer ::selection */
-    
-    /* .footer{
-        margin-top: 60rem;
-    } */
+
+    .foot {
+        height: 20vh;
+    }
+    .footer .max-width .up p a{
+       font-size: 16px;
+    } 
 
  }
 
@@ -1176,94 +1163,93 @@ aside .max-width li a:hover{
         padding: 0 50px;
         margin: 0 auto;
     }
+
      /* .links */
-     nav .max-width {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-     }
-
-     nav .max-width .links {
-         padding-top: 20px;
-         position: fixed;
-         top: -900%;
-         right: 0;
-         background: var(--dblue);
-         /* padding-right: 15px; */
-         display: block;
-         justify-content: center;
-         align-items: center;
-         text-align: center;
-         background: var(--dblue);
-         height: 100vh;
-         width: 99%;
-         z-index: 999;
-     }
-
-     nav .max-width .links li {
-         margin-top: 80px;
-     }
-
-     nav .max-width .links li a {
-         font-size: 18px;
-     }
-
-     /* Menu and X-mark */
-
-     .menu {
-         display: block;
-     }
-
-     #cancel {
-         display: block;
-         font-size: 20px;
-         color: var(--lpurple);
-     }
-
-     /* Social .links */
-
-     aside {
-         display: none;
-     }
-
-     /* Hero Section */
 
 
-     .hero .max-width {
-         z-index: -1;
-     }
+    nav .max-width {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+    nav .max-width .links {
+       padding-top: 20px;
+       position: fixed;
+       top: -900%;
+       right: 0;
+       background: var(--dblue);
+       display: block;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       background: var(--dblue);
+       height: 100vh;
+       width: 99%;
+       z-index: 999;
+    }
+    nav .max-width .links li {
+        margin-top: 80px;
+    }
+    nav .max-width .links li a {
+        font-size: 18px;
+    }
 
-     .hero .max-width p {
-         font-size: 20px;
-     }
 
-     .hero .max-width h2 {
-         font-size: 42px;
-         margin-left: 0;
-     }
+    /* Menu and X-mark */
 
-     .hero .max-width .line {
-         width: 50px;
-     }
 
-     .hero .max-width .about .text-1 {
-         font-size: 15px;
-         text-align: center;
-     }
+    .menu {
+        display: block;
+    }
+    #cancel {
+        display: block;
+        font-size: 20px;
+        color: var(--lpurple);
+    }
 
-     .hero .max-width .about .text-2 {
-         display: none;
-     }
 
-     /* Skills selection */
+    /* Social .links */
+
+
+    aside {
+        display: none;
+    }
+
+    /* Hero Section */
+
+
+    .hero .max-width {
+        z-index: -1;
+    }
+    .hero .max-width p {
+        font-size: 20px;
+    }
+    .hero .max-width h2 {
+        font-size: 42px;
+        margin-left: 0;
+    }
+    .hero .max-width .line {
+        width: 50px;
+    }
+    .hero .max-width .about .text-1 {
+        font-size: 15px;
+        text-align: center;
+    }
+    .hero .max-width .about .text-2 {
+        display: none;
+    }
+
+
+    /* Skills selection */
+
+
     .skills .max-width {
         flex-direction: column;
         text-align: center;
     }
 
     .skills .no-1 {
-        font-size: 40px;
-        padding: 1rem;
+        padding: 2rem;
         text-align: center;
     }
 
@@ -1273,6 +1259,10 @@ aside .max-width li a:hover{
 
     .skills .max-width .left .head-1 {
         font-size: 30px;
+    }
+
+    .skills .max-width .left .line {
+        display: none;
     }
 
     .skills .max-width .left .text-3 {
@@ -1304,55 +1294,80 @@ aside .max-width li a:hover{
         font-size: 20px;
     }
 
-     /* Experience selection */
+
+    /* Experience selection */
 
 
-     .exp {
-         text-align: center;
-         padding: 25% 0;
-     }
+    .exp {
+        padding: 100% 0;
+    }
 
-     .exp .max-width .content {
-         display: block;
-         justify-content: space-between;
-         align-items: center;
-     }
+    .exp .max-width {
+        display: flex;
+        flex-direction: column;
+    }
 
-     .exp .max-width .content .left {
-         width: 100%;
-     }
+    .exp .no-1 {
+        padding: 2rem;
+        text-align: center;
+    }
 
-     .exp .max-width .content .right {
-         width: 100%;
-     }
+    .exp .max-width .left {
+        width: 100%;
+    }
 
-     .exp .max-width .content .center {
-         display: none;
-     }
+    .exp .max-width .left .head-1 {
+        font-size: 30px;
+        text-align: center;
+    }
 
-     .exp .max-width .content .left .text-3 {
-         text-align: center;
-     }
+    .exp .max-width .left .line {
+        display: none;
+    }
 
-     .exp .max-width .content .left .head-1 {
-         text-align: center;
-     }
+    .exp .max-width .left .text-3 {
+        text-align: center;
+        padding: 1rem;
+    }
 
-     .exp .max-width .content .left .line {
-         display: none;
-     }
+    .exp .max-width .right {
+        width: 100%;
+    }
 
-     .exp .max-width .content .left .no-1 {
-         font-size: 35px;
-     }
+    .exp .max-width .right ol {
+        display: flex;
+        flex-direction: column;
+        margin: .5rem 0;
+    }
 
-     .exp .max-width .content .left .head-1 {
-         font-size: 30px;
-     }
+    .exp .max-width .right ol li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .exp .max-width .right ol li h5 {
+        color: var(--white2);
+        font-family: var(--sc), sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 1rem;
+    }
+
+    .exp .max-width .right ol li p {
+        color: var(--white2);
+        font-family: var(--Av), sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        padding-top: 1rem;
+    }
+
 
      /* Portfolio ::selection */
-     /* .port .max-width .no-1 {
-         font-size: 35px;
+
+
+     .port .max-width .no-1 {
+        text-align: center;
+        padding: 2rem;
      }
 
      .port .max-width .head-1 {
@@ -1360,57 +1375,60 @@ aside .max-width li a:hover{
      }
 
      .port .max-width .line {
-         display: none;
+        display: none;
      }
 
      .port .max-width .content .btn {
-         margin-top: 5%;
-     } */
+        margin-top: 5%;
+     } 
 
      /* Contact selection */
 
 
-     .con {
-         text-align: center;
-         padding: 25% 0;
-     }
+         .con {
+             padding: 100px 0;
+         }
+         .con .no-1{
+            text-align: center;
+            padding: 2rem;
+         }
+         .con .max-width {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+    
+         .con .max-width .left {
+             width: 100%;
+             text-align: center;
+         }
+    
+         .con .max-width .right {
+             width: 100%;
+             text-align: center;
+             margin: .5rem 0;
+         }
+    
+         .con .max-width .right li {
+             list-style: none;
+         }
+    
+         .con .max-width .left .text-4 {
+             font-size: 20px;
+         }
+    
+         .con .max-width .left .head-1 {
+             font-size: 35px;
+         }
+    
+         .con .max-width .left .line {
+             display: none;
+         }
 
-     .con .max-width .content {
-         display: block;
-         justify-content: space-between;
-         align-items: center;
-     }
-
-     .con .max-width .content .left {
-         display: none;
-     }
-
-     .con .max-width .content .right {
-         width: 100%;
-     }
-
-     .con .max-width .content .right .specific {
-         display: block;
-         font-size: 20px;
-     }
-
-     .con .max-width .content .center {
-         display: none;
-     }
-
-     .con .max-width .content .left .text-4 {
-         font-size: 35px;
-     }
-
-     .con .max-width .content .left .head-1 {
-         font-size: 30px;
-     }
-
-     .con .max-width .content .left .line {
-         display: none;
-     }
 
      /* Portfolio Page */
+
+
      .display {
          height: 100vh;
      }
@@ -1517,9 +1535,9 @@ aside .max-width li a:hover{
      }
 
      /* Footer ::selection */
-    /*.footer {
-        margin-top: 160em;
-    } */
+    .footer {
+        
+    }
 
  }
 
@@ -1533,7 +1551,11 @@ aside .max-width li a:hover{
         padding: 0 50px;
         margin: 0 auto;
     }
+
+
      /* .links */
+
+
      nav .max-width {
          display: flex;
          justify-content: space-evenly;
@@ -1612,14 +1634,17 @@ aside .max-width li a:hover{
         text-align: center;
      }
 
+
      /* Skills selection */
+
+
     .skills .max-width {
         flex-direction: column;
         text-align: center;
     }
 
     .skills .no-1 {
-        font-size: 40px;
+        font-size: 45px;
         padding: 1rem;
         text-align: center;
     }
@@ -1629,9 +1654,12 @@ aside .max-width li a:hover{
     }
 
     .skills .max-width .left .head-1 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
+    .skills .max-width .left .line {
+        display: none;
+    }
     .skills .max-width .left .text-3 {
         padding: 1rem;
         font-size: 20px;
@@ -1663,48 +1691,65 @@ aside .max-width li a:hover{
 
      /* Experience selection */
 
-
-     .exp {
-         text-align: center;
-         padding: 25% 0;
-     }
-
-     .exp .max-width .content {
-         display: block;
-         justify-content: space-between;
-         align-items: center;
-     }
-
-     .exp .max-width .content .left {
-         width: 100%;
-     }
-
-     .exp .max-width .content .right {
-         width: 100%;
-     }
-
-     .exp .max-width .content .center {
-         display: none;
-     }
-
-     /* .exp .max-width .content .left .text-3 {
-     } */
-
-     .exp .max-width .content .left .head-1 {
-         text-align: center;
-     }
-
-     .exp .max-width .content .left .line {
-         display: none;
-     }
-
-     .exp .max-width .content .left .no-1 {
-         font-size: 35px;
-     }
-
-     .exp .max-width .content .left .head-1 {
-         font-size: 30px;
-     }
+    
+         .exp .max-width {
+             display: flex;
+             flex-direction: column;
+         }
+    
+         .exp .no-1 {
+             font-size: 45px;
+             text-align: center;
+         }
+    
+         .exp .max-width .left {
+             width: 100%;
+         }
+    
+         .exp .max-width .left .head-1 {
+             font-size: 35px;
+             text-align: center;
+         }
+    
+         .exp .max-width .left .line {
+             display: none;
+         }
+    
+         .exp .max-width .left .text-3 {
+             text-align: center;
+             padding: 1rem;
+         }
+    
+         .exp .max-width .right {
+             width: 100%;
+         }
+    
+         .exp .max-width .right ol {
+             display: flex;
+             flex-direction: column;
+             margin: .5rem 0;
+         }
+    
+         .exp .max-width .right ol li {
+             list-style: none;
+             text-align: center;
+         }
+    
+         .exp .max-width .right ol li h5 {
+             color: var(--white2);
+             font-family: var(--sc), sans-serif;
+             font-size: 20px;
+             font-weight: 400;
+             padding-top: 1rem;
+         }
+    
+         .exp .max-width .right ol li p {
+             color: var(--white2);
+             font-family: var(--Av), sans-serif;
+             font-size: 20px;
+             font-weight: 300;
+             padding-top: 1rem;
+         }
 
      /* Portfolio ::selection */
 
@@ -1768,13 +1813,11 @@ aside .max-width li a:hover{
      }
 
      /* Portfolio Page */
+
+
      .display {
         height: 80vh;
      }
-
-     /* .display .max-width {
-         text-align: center;
-     } */
 
      .display .max-width .no-1 {
          font-size: 35px;
