@@ -584,7 +584,8 @@ aside .max-width li a:hover{
 }
 .display .max-width{
     display: flex;
-    margin: 0 auto;
+    flex-direction: column;
+    width: 100%;
 }
 .display .no-1{
     text-align: center;
@@ -607,29 +608,29 @@ aside .max-width li a:hover{
     width: 100px;
     margin: 0 auto;
 }
-.display .max-width{
-    display: block;
-}
-/* .display .max-width .row{
+.display .max-width .row {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 900px;
 }
-.display .max-width .row .box{
+.display .max-width .row .box {
     background-color: #52ad8e;
-    padding: .3%;
+    padding: 1em;
     margin: 2rem;
     width: 100%;
 }
-.display .max-width .row .box .head-link .content{
+.display .max-width .row .box .head-link .content {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 3%;
 }
-.display .max-width .row .box .head-link .content i{
+.display .max-width .row .box .head-link .content i {
     font-size: 35px;
     color: var(--purple);
 }
+
 .display .max-width .row .box .head-link .content h6{
     font-family: var(--sc), sans-serif;
     font-size: 18px;
@@ -644,6 +645,7 @@ aside .max-width li a:hover{
 }
 .display .max-width .row .box .container .text .h{
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 .display .max-width .row .box .container .text .h a{
@@ -698,7 +700,7 @@ aside .max-width li a:hover{
 }
 .display .max-width .row .box .container .links li a:hover{
     color: var(--purple);
-} */
+} 
 
 
 
