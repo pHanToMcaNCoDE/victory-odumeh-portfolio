@@ -29,10 +29,17 @@
 html{
     scroll-behavior: smooth;
 }
+
+.foot {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 body{
+    position: relative;
+    min-height: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     background: linear-gradient(
         to right,
         var(--dblue) 0%,
@@ -582,7 +589,7 @@ aside .max-width li a:hover{
 
 
 .display{
-    height: 150vh;
+    height: 135vh;
     padding: 100px 0;
 }
 .display .max-width{
@@ -711,7 +718,11 @@ aside .max-width li a:hover{
  **************************************/
 
 .foot{
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
     background-color: var(--black2);
 }
 .foot .max-width{
@@ -788,6 +799,19 @@ aside .max-width li a:hover{
 
  @media only screen  and (min-width: 320px) and (max-width: 480px){
 
+
+    .foot {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    body {
+        position: relative;
+        min-height: 100%;
+        min-height: 100vh;
+    }
     .arrow-up{
         display: none;
     }
@@ -1164,7 +1188,13 @@ aside .max-width li a:hover{
         color: var(--purple);
     } 
     
-        
+    /* Footer ::selection */
+    .foot {
+        position: absolute;
+        right: 0;
+        margin-bottom: -440%;
+        left: 0;
+    }
 
  }
 
@@ -1172,6 +1202,8 @@ aside .max-width li a:hover{
 
 
  @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+
     .max-width {
         width: 50%;
         max-width: 900px;
@@ -1553,6 +1585,14 @@ aside .max-width li a:hover{
          color: var(--purple);
      }
 
+
+    /* Footer ::selection */
+    .foot {
+        position: absolute;
+        right: 0;
+        margin-bottom: -320%;
+        left: 0;
+    }
 
  }
 
@@ -1946,7 +1986,13 @@ aside .max-width li a:hover{
          color: var(--purple);
      }
 
-     /* Footer ::selection */
+         /* Footer ::selection */
+         .foot {
+             position: absolute;
+             right: 0;
+             margin-bottom: -320%;
+             left: 0;
+         }
 
      
 
