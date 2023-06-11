@@ -211,12 +211,10 @@ aside .max-width li a:hover{
 
 .hero{
     height: 100vh;
+    padding: 100px 0px 0px 0px;
 }
 .hero .max-width{
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
     display: block;
     justify-content: space-between;
     align-items: center;
