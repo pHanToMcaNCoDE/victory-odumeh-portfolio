@@ -271,6 +271,29 @@ aside .max-width li a:hover{
     width: 30%;
     margin: 0 auto;
 }
+.hero .max-width .about .btn{
+    margin-top: .7rem;
+}
+.hero .max-width .about .btn a{
+    color: var(--white2);
+    border: 1px solid var(--lpurple);
+    background-color: var(--lpurple);
+    font-family: var(--Av), sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 3rem;
+    padding: 12px 25px;
+    transition: all .3s ease;
+}
+.hero .max-width .about .btn a i{
+    margin-left: .6rem;
+}
+.hero .max-width .about .btn a:hover,
+.hero .max-width .about .btn a:focus {
+    color: var(--lpurple);
+    border: 1px solid var(--lpurple);
+    background: none;
+}
 
 /************************************** 
  # Skills Design 
