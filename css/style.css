@@ -272,7 +272,7 @@ aside .max-width li a:hover{
     margin: 0 auto;
 }
 .hero .max-width .about .btn{
-    margin-top: .7rem;
+    margin-top: 1.5rem;
 }
 .hero .max-width .about .btn a{
     color: var(--white2);
@@ -281,7 +281,7 @@ aside .max-width li a:hover{
     font-family: var(--Av), sans-serif;
     font-size: 19px;
     font-weight: 400;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     padding: 12px 25px;
     transition: all .3s ease;
 }
